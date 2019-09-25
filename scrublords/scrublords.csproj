@@ -64,6 +64,12 @@
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
+    <Compile Include="Gestion des visiteurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des visiteurs.Designer.cs">
+      <DependentUpon>Gestion des visiteurs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

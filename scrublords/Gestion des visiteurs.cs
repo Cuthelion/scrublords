@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace scrublords
 {
-    public partial class Menu : Form
+    public partial class Gestion_des_visiteurs : Form
     {
-        public Menu()
+        public Gestion_des_visiteurs()
         {
             InitializeComponent();
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            //test
         }
     }
 }
