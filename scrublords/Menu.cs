@@ -32,5 +32,10 @@ namespace scrublords
             Form RapportsVisite = new FRapportsVisite();
             RapportsVisite.Show();
         }
+
+        private void Button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

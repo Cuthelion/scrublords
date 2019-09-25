@@ -16,6 +16,8 @@ namespace scrublords
         public FGestionVisiteur()
         {
             InitializeComponent();
+            dgvvisiteur.DataSource = Modèle1.listeVisiteur();
+            bsvisiteur.DataSource = dgvvisiteur;
         }
     }
 }
