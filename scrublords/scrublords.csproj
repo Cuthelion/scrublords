@@ -55,24 +55,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Etat.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FAMILLE.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fichefrais.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FraisForfait.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratoire.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LigneFraisForfait.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LigneFraisHorsForfait.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
     <Compile Include="mdlscrublords.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mdlscrublords.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="mdlscrublords.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
     <Compile Include="mdlscrublords.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>mdlscrublords.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MEDECIN.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEDICAMENT.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MOTIF.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OFFRIR.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAPPORT.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Secteur.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPECIALITE.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Visiteur.cs">
+      <DependentUpon>mdlscrublords.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,6 +163,12 @@
     <Content Include="mdlscrublords.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>mdlscrublords.Context.cs</LastGenOutput>
+      <DependentUpon>mdlscrublords.edmx</DependentUpon>
+    </Content>
+    <Content Include="mdlscrublords.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>mdlscrublords.edmx</DependentUpon>
+      <LastGenOutput>mdlscrublords.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
