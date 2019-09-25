@@ -23,8 +23,8 @@ namespace scrublords
         }
         private void Button2_Click(object sender, EventArgs e)
         {
-            Form Remboursements = new FRemboursements();
-            Remboursements.Show();
+            FRemboursements Remboursements = new FRemboursements();
+            Remboursements.ShowDialog();
         }
 
         private void Button3_Click(object sender, EventArgs e)
