@@ -29,7 +29,7 @@ namespace scrublords
         {
             return maConnexion.FraisForfait.ToList();
         }
-    public static List<Laboratoire> listeLabo()
+        public static List<Laboratoire> listeLabo()
         {
             return maConnexion.Laboratoire.ToList();
         }
@@ -72,13 +72,10 @@ namespace scrublords
         public static List<Visiteur> listeVisiteur()
         {
             return maConnexion.Visiteur.ToList();
-
         }
-
         public static List<RAPPORT> listeRapVis()
         {
             return maConnexion.RAPPORT.ToList();
-
         }
     }
 }
