@@ -16,10 +16,21 @@ namespace scrublords
         {
             InitializeComponent();
         }
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Form Visiteurs = new FGestionVisiteur();
+            Visiteurs.Show();
+        }
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Form Remboursements = new FRemboursements();
+            Remboursements.Show();
+        }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            //test
+            Form RapportsVisite = new FRapportsVisite();
+            RapportsVisite.Show();
         }
     }
 }
