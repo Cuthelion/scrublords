@@ -13,10 +13,10 @@ namespace scrublords
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Scrublords_PPE3Entities : DbContext
+    public partial class connectScrubLords : DbContext
     {
-        public Scrublords_PPE3Entities()
-            : base("name=Scrublords_PPE3Entities")
+        public connectScrubLords()
+            : base("name=connectScrubLords")
         {
         }
     

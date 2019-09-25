@@ -480,7 +480,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Scrublords_PPE3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="mdlScrubLords" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Etat">
           <Key>
             <PropertyRef Name="id" />
@@ -867,7 +867,7 @@
           <End Role="Region" Type="Self.Region" Multiplicity="*" />
           <End Role="Visiteur" Type="Self.Visiteur" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="Scrublords_PPE3Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="connectScrubLords" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Etat" EntityType="Self.Etat" />
           <EntitySet Name="FAMILLE" EntityType="Self.FAMILLE" />
           <EntitySet Name="fichefrais" EntityType="Self.fichefrais" />
@@ -958,9 +958,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Scrublords_PPE3ModelStoreContainer" CdmEntityContainer="Scrublords_PPE3Entities">
+        <EntityContainerMapping StorageEntityContainer="Scrublords_PPE3ModelStoreContainer" CdmEntityContainer="connectScrubLords">
           <EntitySetMapping Name="Etat">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.Etat">
+            <EntityTypeMapping TypeName="mdlScrubLords.Etat">
               <MappingFragment StoreEntitySet="Etat">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="libelle" ColumnName="libelle" />
@@ -968,7 +968,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FAMILLE">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.FAMILLE">
+            <EntityTypeMapping TypeName="mdlScrubLords.FAMILLE">
               <MappingFragment StoreEntitySet="FAMILLE">
                 <ScalarProperty Name="idFamille" ColumnName="idFamille" />
                 <ScalarProperty Name="libFamille" ColumnName="libFamille" />
@@ -976,7 +976,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="fichefrais">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.fichefrais">
+            <EntityTypeMapping TypeName="mdlScrubLords.fichefrais">
               <MappingFragment StoreEntitySet="fichefrais">
                 <ScalarProperty Name="idVisiteur" ColumnName="idVisiteur" />
                 <ScalarProperty Name="mois" ColumnName="mois" />
@@ -988,7 +988,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FraisForfait">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.FraisForfait">
+            <EntityTypeMapping TypeName="mdlScrubLords.FraisForfait">
               <MappingFragment StoreEntitySet="FraisForfait">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="libelle" ColumnName="libelle" />
@@ -997,7 +997,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Laboratoire">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.Laboratoire">
+            <EntityTypeMapping TypeName="mdlScrubLords.Laboratoire">
               <MappingFragment StoreEntitySet="Laboratoire">
                 <ScalarProperty Name="idLabo" ColumnName="idLabo" />
                 <ScalarProperty Name="nomLabo" ColumnName="nomLabo" />
@@ -1005,7 +1005,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LigneFraisForfait">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.LigneFraisForfait">
+            <EntityTypeMapping TypeName="mdlScrubLords.LigneFraisForfait">
               <MappingFragment StoreEntitySet="LigneFraisForfait">
                 <ScalarProperty Name="idVisiteur" ColumnName="idVisiteur" />
                 <ScalarProperty Name="mois" ColumnName="mois" />
@@ -1015,7 +1015,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LigneFraisHorsForfait">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.LigneFraisHorsForfait">
+            <EntityTypeMapping TypeName="mdlScrubLords.LigneFraisHorsForfait">
               <MappingFragment StoreEntitySet="LigneFraisHorsForfait">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="idVisiteur" ColumnName="idVisiteur" />
@@ -1027,7 +1027,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MEDECIN">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.MEDECIN">
+            <EntityTypeMapping TypeName="mdlScrubLords.MEDECIN">
               <MappingFragment StoreEntitySet="MEDECIN">
                 <ScalarProperty Name="idMedecin" ColumnName="idMedecin" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
@@ -1040,7 +1040,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MEDICAMENT">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.MEDICAMENT">
+            <EntityTypeMapping TypeName="mdlScrubLords.MEDICAMENT">
               <MappingFragment StoreEntitySet="MEDICAMENT">
                 <ScalarProperty Name="idMedicament" ColumnName="idMedicament" />
                 <ScalarProperty Name="nomCommercial" ColumnName="nomCommercial" />
@@ -1052,7 +1052,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MOTIF">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.MOTIF">
+            <EntityTypeMapping TypeName="mdlScrubLords.MOTIF">
               <MappingFragment StoreEntitySet="MOTIF">
                 <ScalarProperty Name="idMotif" ColumnName="idMotif" />
                 <ScalarProperty Name="libMotif" ColumnName="libMotif" />
@@ -1060,7 +1060,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OFFRIR">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.OFFRIR">
+            <EntityTypeMapping TypeName="mdlScrubLords.OFFRIR">
               <MappingFragment StoreEntitySet="OFFRIR">
                 <ScalarProperty Name="idRapport" ColumnName="idRapport" />
                 <ScalarProperty Name="idMedicament" ColumnName="idMedicament" />
@@ -1069,7 +1069,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="RAPPORT">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.RAPPORT">
+            <EntityTypeMapping TypeName="mdlScrubLords.RAPPORT">
               <MappingFragment StoreEntitySet="RAPPORT">
                 <ScalarProperty Name="idRapport" ColumnName="idRapport" />
                 <ScalarProperty Name="dateRapport" ColumnName="dateRapport" />
@@ -1081,7 +1081,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Region">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.Region">
+            <EntityTypeMapping TypeName="mdlScrubLords.Region">
               <MappingFragment StoreEntitySet="Region">
                 <ScalarProperty Name="idRegion" ColumnName="idRegion" />
                 <ScalarProperty Name="libRegion" ColumnName="libRegion" />
@@ -1091,7 +1091,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Secteur">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.Secteur">
+            <EntityTypeMapping TypeName="mdlScrubLords.Secteur">
               <MappingFragment StoreEntitySet="Secteur">
                 <ScalarProperty Name="idSecteur" ColumnName="idSecteur" />
                 <ScalarProperty Name="libSecteur" ColumnName="libSecteur" />
@@ -1100,7 +1100,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SPECIALITE">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.SPECIALITE">
+            <EntityTypeMapping TypeName="mdlScrubLords.SPECIALITE">
               <MappingFragment StoreEntitySet="SPECIALITE">
                 <ScalarProperty Name="idSpecialite" ColumnName="idSpecialite" />
                 <ScalarProperty Name="libSpecialite" ColumnName="libSpecialite" />
@@ -1108,7 +1108,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Visiteur">
-            <EntityTypeMapping TypeName="Scrublords_PPE3Model.Visiteur">
+            <EntityTypeMapping TypeName="mdlScrubLords.Visiteur">
               <MappingFragment StoreEntitySet="Visiteur">
                 <ScalarProperty Name="idVisiteur" ColumnName="idVisiteur" />
                 <ScalarProperty Name="idLabo" ColumnName="idLabo" />
@@ -1123,7 +1123,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="Travailler" TypeName="Scrublords_PPE3Model.Travailler" StoreEntitySet="Travailler">
+          <AssociationSetMapping Name="Travailler" TypeName="mdlScrubLords.Travailler" StoreEntitySet="Travailler">
             <EndProperty Name="Region">
               <ScalarProperty Name="idRegion" ColumnName="idRegion" />
             </EndProperty>
