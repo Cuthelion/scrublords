@@ -18,6 +18,6 @@ namespace scrublords
             InitializeComponent();
             bsRapVis.DataSource = Modele.listeRapVis();
             dgvRapVis.DataSource = bsRapVis.DataSource;
-            dgvRapVis.Colums[0].Visible = false;
+            dgvRapVis.Columns[0].Visible = false;
     }
 }
