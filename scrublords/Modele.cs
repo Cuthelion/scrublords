@@ -74,7 +74,12 @@ namespace scrublords
             return maConnexion.Visiteur.ToList();
 
         }
+
+        public static List<RAPPORT> listeRapVis()
+        {
+            return maConnexion.RAPPORT.ToList();
+
+        }
     }
 }
 
-//listeRapVis
