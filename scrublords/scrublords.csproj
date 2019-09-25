@@ -150,6 +150,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FRapportsVisite.resx">
+      <DependentUpon>FRapportsVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRemboursements.resx">
       <DependentUpon>FRemboursements.cs</DependentUpon>
     </EmbeddedResource>
