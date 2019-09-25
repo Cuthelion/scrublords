@@ -123,8 +123,7 @@
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modele.cs" />
-    <Compile Include="modèle1.cs" />
+    <Compile Include="Modele3.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
@@ -148,9 +147,6 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FGestionVisiteur.resx">
-      <DependentUpon>FGestionVisiteur.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRapportsVisite.resx">
       <DependentUpon>FRapportsVisite.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,7 +173,6 @@
       <DependentUpon>mdlscrublords.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Visiteur.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

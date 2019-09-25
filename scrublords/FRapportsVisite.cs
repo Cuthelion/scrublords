@@ -16,8 +16,9 @@ namespace scrublords
         public FRapportsVisite()
         {
             InitializeComponent();
-            bsRapVis.DataSource = Modele.listeRapVis();
+            bsRapVis.DataSource = Modele3.listeRapVis();
             dgvRapVis.DataSource = bsRapVis.DataSource;
             dgvRapVis.Columns[0].Visible = false;
+        }
     }
 }
