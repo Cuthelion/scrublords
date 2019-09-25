@@ -16,5 +16,10 @@ namespace scrublords
         {
             InitializeComponent();
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            //test
+        }
     }
 }
