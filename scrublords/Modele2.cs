@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace scrublords
 {
-    public static class Modele3
+    public static class Modele2
     {
+        private static connectScrubLords maConnexion;
         public static void init()
         {
             maConnexion = new connectScrubLords();
@@ -78,3 +79,4 @@ namespace scrublords
         }
     }
 }
+

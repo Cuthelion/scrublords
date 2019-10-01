@@ -38,7 +38,7 @@
             // dgvRapVis
             // 
             this.dgvRapVis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRapVis.Location = new System.Drawing.Point(276, 88);
+            this.dgvRapVis.Location = new System.Drawing.Point(548, 12);
             this.dgvRapVis.Name = "dgvRapVis";
             this.dgvRapVis.Size = new System.Drawing.Size(240, 150);
             this.dgvRapVis.TabIndex = 0;

@@ -123,6 +123,7 @@
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modele2.cs" />
     <Compile Include="Modele3.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
