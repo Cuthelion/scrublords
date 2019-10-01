@@ -9,6 +9,17 @@ namespace scrublords
     public static class Modele1
     {
         private static connectScrubLords maConnexion;
+        private static Visiteur visiteurConnecte;
+
+        public static Visiteur VisiteurConnecte { get => visiteurConnecte; set => visiteurConnecte = value; }
+
+        public static void trouvVisiteurId(string id)
+        {
+            var LQuery = maConnexion.Visiteur.ToList()
+                           .Where(x => x.idVisiteur == id);
+
+            visiteurConnecte = (Visiteur)LQuery.ToList().First();
+        }
         public static void init()
         {
             maConnexion = new connectScrubLords();
