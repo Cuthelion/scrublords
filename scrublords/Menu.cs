@@ -27,10 +27,21 @@ namespace scrublords
             Remboursements.ShowDialog();
         }
 
-        private void Button3_Click_1(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             Form RapportsVisite = new FRapportsVisite();
             RapportsVisite.Show();
+        }
+
+        private void Button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            Form InfosVistiteurs = new FInfosVistiteurs();
+            InfosVistiteurs.Show();
         }
     }
 }
