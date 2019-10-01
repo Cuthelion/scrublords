@@ -58,6 +58,7 @@
             this.nomLaboTextBox = new System.Windows.Forms.TextBox();
             this.bssecteur = new System.Windows.Forms.BindingSource(this.components);
             this.idVisiteurTextBox1 = new System.Windows.Forms.TextBox();
+            this.rAPPORTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             cpLabel = new System.Windows.Forms.Label();
             dateEmbaucheLabel = new System.Windows.Forms.Label();
             identifiantLabel = new System.Windows.Forms.Label();
@@ -73,6 +74,7 @@
             idVisiteurLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAPPORTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cpLabel
@@ -182,6 +184,15 @@
             nomLaboLabel.Size = new System.Drawing.Size(57, 13);
             nomLaboLabel.TabIndex = 27;
             nomLaboLabel.Text = "nom Labo:";
+            // 
+            // idVisiteurLabel1
+            // 
+            idVisiteurLabel1.AutoSize = true;
+            idVisiteurLabel1.Location = new System.Drawing.Point(103, 46);
+            idVisiteurLabel1.Name = "idVisiteurLabel1";
+            idVisiteurLabel1.Size = new System.Drawing.Size(55, 13);
+            idVisiteurLabel1.TabIndex = 28;
+            idVisiteurLabel1.Text = "id Visiteur:";
             // 
             // Modif_click
             // 
@@ -293,15 +304,6 @@
             // 
             this.bssecteur.DataSource = typeof(scrublords.Secteur);
             // 
-            // idVisiteurLabel1
-            // 
-            idVisiteurLabel1.AutoSize = true;
-            idVisiteurLabel1.Location = new System.Drawing.Point(103, 46);
-            idVisiteurLabel1.Name = "idVisiteurLabel1";
-            idVisiteurLabel1.Size = new System.Drawing.Size(55, 13);
-            idVisiteurLabel1.TabIndex = 28;
-            idVisiteurLabel1.Text = "id Visiteur:";
-            // 
             // idVisiteurTextBox1
             // 
             this.idVisiteurTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bssecteur, "idVisiteur", true));
@@ -309,6 +311,10 @@
             this.idVisiteurTextBox1.Name = "idVisiteurTextBox1";
             this.idVisiteurTextBox1.Size = new System.Drawing.Size(100, 20);
             this.idVisiteurTextBox1.TabIndex = 29;
+            // 
+            // rAPPORTBindingSource
+            // 
+            this.rAPPORTBindingSource.DataSource = typeof(scrublords.RAPPORT);
             // 
             // FInfosVistiteurs
             // 
@@ -346,6 +352,7 @@
             this.Text = "FInfosVistiteurs";
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rAPPORTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +375,6 @@
         private System.Windows.Forms.TextBox nomLaboTextBox;
         private System.Windows.Forms.BindingSource bssecteur;
         private System.Windows.Forms.TextBox idVisiteurTextBox1;
+        private System.Windows.Forms.BindingSource rAPPORTBindingSource;
     }
 }

@@ -204,6 +204,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RAPPORT.datasource" />
     <None Include="Secteur.datasource" />
     <None Include="Visiteur.datasource" />
   </ItemGroup>
