@@ -123,7 +123,7 @@
     <Compile Include="MEDICAMENT.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modele2.cs" />
+    <Compile Include="Modele1.cs" />
     <Compile Include="Modele3.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
@@ -148,6 +148,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FGestionVisiteur.resx">
+      <DependentUpon>FGestionVisiteur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRapportsVisite.resx">
       <DependentUpon>FRapportsVisite.cs</DependentUpon>
     </EmbeddedResource>
