@@ -37,5 +37,11 @@ namespace scrublords
         {
 
         }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            Form InfosVistiteurs = new FInfosVistiteurs();
+            InfosVistiteurs.Show();
+        }
     }
 }

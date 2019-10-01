@@ -72,6 +72,18 @@
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
+    <Compile Include="FInfosVistiteurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfosVistiteurs.Designer.cs">
+      <DependentUpon>FInfosVistiteurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fmodifvisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmodifvisiteur.Designer.cs">
+      <DependentUpon>Fmodifvisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRapportsVisite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,12 @@
     <EmbeddedResource Include="FGestionVisiteur.resx">
       <DependentUpon>FGestionVisiteur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FInfosVistiteurs.resx">
+      <DependentUpon>FInfosVistiteurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fmodifvisiteur.resx">
+      <DependentUpon>Fmodifvisiteur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRapportsVisite.resx">
       <DependentUpon>FRapportsVisite.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +204,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Secteur.datasource" />
+    <None Include="Visiteur.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
