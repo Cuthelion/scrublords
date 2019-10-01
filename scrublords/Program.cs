@@ -20,6 +20,8 @@ namespace scrublords
             Application.SetCompatibleTextRenderingDefault(false);
             Modele1.init();
             Modele1.trouvVisiteurId("a13");
+            Modele3.init();
+            Modele3.trouvVisiteurId("a13");
             Application.Run(new Menu());
         }
     }

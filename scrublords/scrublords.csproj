@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FAjoutRapVis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAjoutRapVis.Designer.cs">
+      <DependentUpon>FAjoutRapVis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Etat.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
@@ -148,6 +154,9 @@
     <Compile Include="Visiteur.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FAjoutRapVis.resx">
+      <DependentUpon>FAjoutRapVis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FGestionVisiteur.resx">
       <DependentUpon>FGestionVisiteur.cs</DependentUpon>
     </EmbeddedResource>

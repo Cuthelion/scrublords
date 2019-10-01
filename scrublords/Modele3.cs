@@ -8,6 +8,28 @@ namespace scrublords
 {
     public static class Modele3
     {
+        private static connectScrubLords maConnexion;
+        private static Visiteur visiteurConnecte3;
+        public static RAPPORT leRapportChoisi;
+
+        public static Visiteur VisiteurConnecte3 { get => visiteurConnecte3; set => visiteurConnecte3 = value; }
+
+        public static void trouvVisiteurId(string id)
+        {
+            var LQuery = maConnexion.Visiteur.ToList()
+                           .Where(x => x.idVisiteur == id);
+
+            visiteurConnecte3 = (Visiteur)LQuery.ToList().First();
+        }
+
+        public static void trouverRapportid(int id)
+        {
+            var LQuery = maConnexion.RAPPORT.ToList()
+                           .Where(x => x.idRapport == id);
+
+            leRapportChoisi = (RAPPORT)LQuery.ToList().First();
+        }
+
         public static void init()
         {
             maConnexion = new connectScrubLords();
