@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,15 +10,21 @@ using System.Windows.Forms;
 
 namespace scrublords
 {
-    public partial class FGestionVisiteur : Form
+    public partial class FDetails : Form
     {
-        public FGestionVisiteur()
+        public FDetails()
         {
             InitializeComponent();
         }
 
+        private void FDetails_Load(object sender, EventArgs e)
+        {
+
+            MEDECIN medecintemp = Modele3.leMedecinChoisi;
+
+            tbId.Text = (medecintemp.idMedecin).ToString();
 
 
-        
+        }
     }
 }

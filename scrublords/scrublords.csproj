@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDetails.Designer.cs">
+      <DependentUpon>FDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAjoutRapVis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <EmbeddedResource Include="FAjoutRapVis.resx">
       <DependentUpon>FAjoutRapVis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDetails.resx">
+      <DependentUpon>FDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FGestionVisiteur.resx">
       <DependentUpon>FGestionVisiteur.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +238,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="RAPPORT.datasource" />
+    <None Include="Secteur1.datasource" />
     <None Include="Visiteur1.datasource" />
   </ItemGroup>
   <ItemGroup>
