@@ -18,9 +18,8 @@ namespace scrublords
             InitializeComponent();
         }
 
-        private void Dgvvisiteur_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
+
+        
     }
 }

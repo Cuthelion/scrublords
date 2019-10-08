@@ -78,6 +78,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Entrer";
             this.button1.UseVisualStyleBackColor = true;
+
             // 
             // FGestionVisiteur
             // 
