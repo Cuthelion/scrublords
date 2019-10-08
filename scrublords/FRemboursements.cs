@@ -17,5 +17,10 @@ namespace scrublords
         {
             InitializeComponent();
         }
+
+        private void FRemboursements_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("scum");
+        }
     }
 }

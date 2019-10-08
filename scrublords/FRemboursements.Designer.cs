@@ -83,6 +83,7 @@
             this.Controls.Add(this.labelnomUtil);
             this.Name = "FRemboursements";
             this.Text = "FRemboursements";
+            this.Load += new System.EventHandler(this.FRemboursements_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             this.ResumeLayout(false);
