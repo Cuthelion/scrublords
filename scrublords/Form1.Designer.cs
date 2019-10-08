@@ -1,6 +1,6 @@
 ﻿namespace scrublords
 {
-    partial class Fmodifvisiteur
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,24 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // Fmodifvisiteur
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Fmodifvisiteur";
-            this.Text = "Fmodifvisiteur";
-            ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
-            this.ResumeLayout(false);
-
+            this.Text = "Form1";
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource bsvisiteur;
     }
 }

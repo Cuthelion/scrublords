@@ -78,6 +78,24 @@
     <Compile Include="fichefrais.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
+    <Compile Include="FInfosVisiteurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FInfosVisiteurs.Designer.cs">
+      <DependentUpon>FInfosVisiteurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fmodifvisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmodifvisiteur.Designer.cs">
+      <DependentUpon>Fmodifvisiteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRapportsVisite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +178,15 @@
     <EmbeddedResource Include="FGestionVisiteur.resx">
       <DependentUpon>FGestionVisiteur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FInfosVisiteurs.resx">
+      <DependentUpon>FInfosVisiteurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fmodifvisiteur.resx">
+      <DependentUpon>Fmodifvisiteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRapportsVisite.resx">
       <DependentUpon>FRapportsVisite.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +223,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="RAPPORT.datasource" />
+    <None Include="Visiteur1.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace scrublords
 {
-    public partial class Fmodifvisiteur : Form
+    public partial class Form1 : Form
     {
-        public Fmodifvisiteur()
+        public Form1()
         {
             InitializeComponent();
-            bsvisiteur.DataSource = Modele1.VisiteurConnecte;
         }
     }
 }
