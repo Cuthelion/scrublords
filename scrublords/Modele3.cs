@@ -12,6 +12,7 @@ namespace scrublords
         private static Visiteur visiteurConnecte3;
 
         public static Visiteur VisiteurConnecte3 { get => visiteurConnecte3; set => visiteurConnecte3 = value; }
+        public static MEDECIN leMedecinChoisi;
 
         public static void trouvVisiteurId(string id)
         {
@@ -20,6 +21,15 @@ namespace scrublords
 
             visiteurConnecte3 = (Visiteur)LQuery.ToList().First();
         }
+
+        public static void trouverMedecinId(int id)
+        {
+            var LQuery = maConnexion.MEDECIN.ToList()
+                           .Where(x => x.idMedecin == id);
+
+            leMedecinChoisi = (MEDECIN)LQuery.ToList().First();
+        }
+
         public static void init()
         {
             maConnexion = new connectScrubLords();

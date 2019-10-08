@@ -36,13 +36,9 @@ namespace scrublords
             else
             {
                 //init Var  
-                DateTime date = dtpDate.Value;
-                string bilan = rtbBilan.Text;
 
                 //Créer Rapport
                 RAPPORT newRapport = new RAPPORT();
-                newRapport.dateRapport = date;
-                newRapport.bilan = bilan;
                 
                 //Messagebox
                 MessageBox.Show("Rapport Ajouté");

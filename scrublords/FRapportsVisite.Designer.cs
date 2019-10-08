@@ -29,110 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label bilanLabel;
-            System.Windows.Forms.Label dateRapportLabel;
-            System.Windows.Forms.Label idMedecinLabel;
-            System.Windows.Forms.Label idRapportLabel;
-            System.Windows.Forms.Label libMotifLabel;
-            this.bilanTextBox = new System.Windows.Forms.TextBox();
-            this.bsRapVis = new System.Windows.Forms.BindingSource(this.components);
-            this.dateRapportDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.idMedecinTextBox = new System.Windows.Forms.TextBox();
-            this.idRapportTextBox = new System.Windows.Forms.TextBox();
-            this.libMotifTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            bilanLabel = new System.Windows.Forms.Label();
-            dateRapportLabel = new System.Windows.Forms.Label();
-            idMedecinLabel = new System.Windows.Forms.Label();
-            idRapportLabel = new System.Windows.Forms.Label();
-            libMotifLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bsRapVis)).BeginInit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbNumero = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbPraticien = new System.Windows.Forms.ComboBox();
+            this.rtbBilan = new System.Windows.Forms.RichTextBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.Details = new System.Windows.Forms.Button();
+            this.Precedent = new System.Windows.Forms.Button();
+            this.Suivant = new System.Windows.Forms.Button();
+            this.Nouveau = new System.Windows.Forms.Button();
+            this.bsRapports = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvOffrir = new System.Windows.Forms.DataGridView();
+            this.bsOffrir = new System.Windows.Forms.BindingSource(this.components);
+            this.bsMedecins = new System.Windows.Forms.BindingSource(this.components);
+            this.cbMotif = new System.Windows.Forms.ComboBox();
+            this.bsMotifs = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOffrir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsOffrir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMedecins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMotifs)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bilanLabel
-            // 
-            bilanLabel.AutoSize = true;
-            bilanLabel.Location = new System.Drawing.Point(14, 150);
-            bilanLabel.Name = "bilanLabel";
-            bilanLabel.Size = new System.Drawing.Size(44, 13);
-            bilanLabel.TabIndex = 1;
-            bilanLabel.Text = "BILAN :";
-            // 
-            // dateRapportLabel
-            // 
-            dateRapportLabel.AutoSize = true;
-            dateRapportLabel.Location = new System.Drawing.Point(14, 99);
-            dateRapportLabel.Name = "dateRapportLabel";
-            dateRapportLabel.Size = new System.Drawing.Size(77, 13);
-            dateRapportLabel.TabIndex = 3;
-            dateRapportLabel.Text = "Date Rapport :";
-            // 
-            // idMedecinLabel
-            // 
-            idMedecinLabel.AutoSize = true;
-            idMedecinLabel.Location = new System.Drawing.Point(14, 72);
-            idMedecinLabel.Name = "idMedecinLabel";
-            idMedecinLabel.Size = new System.Drawing.Size(54, 13);
-            idMedecinLabel.TabIndex = 5;
-            idMedecinLabel.Text = "Praticien :";
-            // 
-            // idRapportLabel
-            // 
-            idRapportLabel.AutoSize = true;
-            idRapportLabel.Location = new System.Drawing.Point(14, 43);
-            idRapportLabel.Name = "idRapportLabel";
-            idRapportLabel.Size = new System.Drawing.Size(91, 13);
-            idRapportLabel.TabIndex = 9;
-            idRapportLabel.Text = "Numéro Rapport :";
-            // 
-            // libMotifLabel
-            // 
-            libMotifLabel.AutoSize = true;
-            libMotifLabel.Location = new System.Drawing.Point(14, 124);
-            libMotifLabel.Name = "libMotifLabel";
-            libMotifLabel.Size = new System.Drawing.Size(64, 13);
-            libMotifLabel.TabIndex = 29;
-            libMotifLabel.Text = "Motif Visite :";
-            // 
-            // bilanTextBox
-            // 
-            this.bilanTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRapVis, "bilan", true));
-            this.bilanTextBox.Location = new System.Drawing.Point(111, 147);
-            this.bilanTextBox.Name = "bilanTextBox";
-            this.bilanTextBox.Size = new System.Drawing.Size(200, 20);
-            this.bilanTextBox.TabIndex = 2;
-            // 
-            // dateRapportDateTimePicker
-            // 
-            this.dateRapportDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bsRapVis, "dateRapport", true));
-            this.dateRapportDateTimePicker.Location = new System.Drawing.Point(111, 95);
-            this.dateRapportDateTimePicker.Name = "dateRapportDateTimePicker";
-            this.dateRapportDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dateRapportDateTimePicker.TabIndex = 4;
-            // 
-            // idMedecinTextBox
-            // 
-            this.idMedecinTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRapVis, "idMedecin", true));
-            this.idMedecinTextBox.Location = new System.Drawing.Point(111, 69);
-            this.idMedecinTextBox.Name = "idMedecinTextBox";
-            this.idMedecinTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idMedecinTextBox.TabIndex = 6;
-            // 
-            // idRapportTextBox
-            // 
-            this.idRapportTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRapVis, "idRapport", true));
-            this.idRapportTextBox.Location = new System.Drawing.Point(111, 43);
-            this.idRapportTextBox.Name = "idRapportTextBox";
-            this.idRapportTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idRapportTextBox.TabIndex = 10;
-            // 
-            // libMotifTextBox
-            // 
-            this.libMotifTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsRapVis, "MOTIF.libMotif", true));
-            this.libMotifTextBox.Location = new System.Drawing.Point(111, 121);
-            this.libMotifTextBox.Name = "libMotifTextBox";
-            this.libMotifTextBox.Size = new System.Drawing.Size(100, 20);
-            this.libMotifTextBox.TabIndex = 30;
             // 
             // label7
             // 
@@ -144,52 +66,187 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "RAPPORTS DE VISITE";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 13);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Numéro Rapport :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 13);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Date Rapport :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 128);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 13);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Motif Visite :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 153);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 13);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "BILAN :";
+            // 
+            // tbNumero
+            // 
+            this.tbNumero.Location = new System.Drawing.Point(109, 46);
+            this.tbNumero.Name = "tbNumero";
+            this.tbNumero.Size = new System.Drawing.Size(62, 20);
+            this.tbNumero.TabIndex = 36;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(12, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 13);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Praticien :";
+            // 
+            // cbPraticien
+            // 
+            this.cbPraticien.FormattingEnabled = true;
+            this.cbPraticien.Location = new System.Drawing.Point(109, 71);
+            this.cbPraticien.Name = "cbPraticien";
+            this.cbPraticien.Size = new System.Drawing.Size(121, 21);
+            this.cbPraticien.TabIndex = 40;
+            this.cbPraticien.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.CbPraticien_Format);
+            // 
+            // rtbBilan
+            // 
+            this.rtbBilan.Location = new System.Drawing.Point(109, 150);
+            this.rtbBilan.Name = "rtbBilan";
+            this.rtbBilan.Size = new System.Drawing.Size(171, 96);
+            this.rtbBilan.TabIndex = 41;
+            this.rtbBilan.Text = "";
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(109, 99);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(202, 20);
+            this.dtpDate.TabIndex = 42;
+            // 
+            // Details
+            // 
+            this.Details.Location = new System.Drawing.Point(236, 69);
+            this.Details.Name = "Details";
+            this.Details.Size = new System.Drawing.Size(75, 23);
+            this.Details.TabIndex = 43;
+            this.Details.Text = "Détails";
+            this.Details.UseVisualStyleBackColor = true;
+            this.Details.Click += new System.EventHandler(this.Details_Click);
+            // 
+            // Precedent
+            // 
+            this.Precedent.Location = new System.Drawing.Point(70, 252);
+            this.Precedent.Name = "Precedent";
+            this.Precedent.Size = new System.Drawing.Size(75, 23);
+            this.Precedent.TabIndex = 44;
+            this.Precedent.Text = "Précédent";
+            this.Precedent.UseVisualStyleBackColor = true;
+            // 
+            // Suivant
+            // 
+            this.Suivant.Location = new System.Drawing.Point(151, 252);
+            this.Suivant.Name = "Suivant";
+            this.Suivant.Size = new System.Drawing.Size(75, 23);
+            this.Suivant.TabIndex = 45;
+            this.Suivant.Text = "Suivant";
+            this.Suivant.UseVisualStyleBackColor = true;
+            // 
+            // Nouveau
+            // 
+            this.Nouveau.Location = new System.Drawing.Point(232, 252);
+            this.Nouveau.Name = "Nouveau";
+            this.Nouveau.Size = new System.Drawing.Size(75, 23);
+            this.Nouveau.TabIndex = 46;
+            this.Nouveau.Text = "Nouveau";
+            this.Nouveau.UseVisualStyleBackColor = true;
+            // 
+            // dgvOffrir
+            // 
+            this.dgvOffrir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOffrir.Location = new System.Drawing.Point(317, 46);
+            this.dgvOffrir.Name = "dgvOffrir";
+            this.dgvOffrir.Size = new System.Drawing.Size(240, 150);
+            this.dgvOffrir.TabIndex = 47;
+            // 
+            // cbMotif
+            // 
+            this.cbMotif.FormattingEnabled = true;
+            this.cbMotif.Location = new System.Drawing.Point(109, 125);
+            this.cbMotif.Name = "cbMotif";
+            this.cbMotif.Size = new System.Drawing.Size(121, 21);
+            this.cbMotif.TabIndex = 48;
+            // 
             // FRapportsVisite
             // 
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(755, 749);
+            this.ClientSize = new System.Drawing.Size(755, 298);
+            this.Controls.Add(this.cbMotif);
+            this.Controls.Add(this.dgvOffrir);
+            this.Controls.Add(this.Nouveau);
+            this.Controls.Add(this.Suivant);
+            this.Controls.Add(this.Precedent);
+            this.Controls.Add(this.Details);
+            this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.rtbBilan);
+            this.Controls.Add(this.cbPraticien);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.tbNumero);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(libMotifLabel);
-            this.Controls.Add(this.libMotifTextBox);
-            this.Controls.Add(bilanLabel);
-            this.Controls.Add(this.bilanTextBox);
-            this.Controls.Add(dateRapportLabel);
-            this.Controls.Add(this.dateRapportDateTimePicker);
-            this.Controls.Add(idMedecinLabel);
-            this.Controls.Add(this.idMedecinTextBox);
-            this.Controls.Add(idRapportLabel);
-            this.Controls.Add(this.idRapportTextBox);
             this.Name = "FRapportsVisite";
-            ((System.ComponentModel.ISupportInitialize)(this.bsRapVis)).EndInit();
+            this.Load += new System.EventHandler(this.Rapport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOffrir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsOffrir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMedecins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMotifs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button bAjoutRapVis;
-        private System.Windows.Forms.Button bModifRapVis;
-        private System.Windows.Forms.ComboBox comboRapVisPrat;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource bsMed;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbNumRap;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpDate;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbMotVis;
-        private System.Windows.Forms.RichTextBox rtbBilan;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button bPrec;
-        private System.Windows.Forms.Button BSuiv;
-        private System.Windows.Forms.BindingSource bsRapVis;
-        private System.Windows.Forms.TextBox bilanTextBox;
-        private System.Windows.Forms.DateTimePicker dateRapportDateTimePicker;
-        private System.Windows.Forms.TextBox idMedecinTextBox;
-        private System.Windows.Forms.TextBox idRapportTextBox;
-        private System.Windows.Forms.TextBox libMotifTextBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbNumero;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbPraticien;
+        private System.Windows.Forms.RichTextBox rtbBilan;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.Button Details;
+        private System.Windows.Forms.Button Precedent;
+        private System.Windows.Forms.Button Suivant;
+        private System.Windows.Forms.Button Nouveau;
+        private System.Windows.Forms.BindingSource bsRapports;
+        private System.Windows.Forms.DataGridView dgvOffrir;
+        private System.Windows.Forms.BindingSource bsOffrir;
+        private System.Windows.Forms.BindingSource bsMedecins;
+        private System.Windows.Forms.ComboBox cbMotif;
+        private System.Windows.Forms.BindingSource bsMotifs;
     }
 }
