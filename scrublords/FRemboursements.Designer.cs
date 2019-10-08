@@ -29,63 +29,105 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbNom = new System.Windows.Forms.Label();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
-            this.labelnomUtil = new System.Windows.Forms.Label();
-            this.labelMDP = new System.Windows.Forms.Label();
-            this.nomUtil = new System.Windows.Forms.TextBox();
-            this.mdp = new System.Windows.Forms.TextBox();
+            this.bsFiches = new System.Windows.Forms.BindingSource(this.components);
+            this.lbnbfiches = new System.Windows.Forms.Label();
+            this.buttonCmplt = new System.Windows.Forms.Button();
+            this.buttonCnlt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFiches)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelnomUtil
+            // dataGridView1
             // 
-            this.labelnomUtil.AutoSize = true;
-            this.labelnomUtil.Location = new System.Drawing.Point(57, 28);
-            this.labelnomUtil.Name = "labelnomUtil";
-            this.labelnomUtil.Size = new System.Drawing.Size(90, 13);
-            this.labelnomUtil.TabIndex = 0;
-            this.labelnomUtil.Text = "Nom d\'utilisateur :";
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Desktop;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(660, 392);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // labelMDP
+            // lbNom
             // 
-            this.labelMDP.AutoSize = true;
-            this.labelMDP.Location = new System.Drawing.Point(57, 91);
-            this.labelMDP.Name = "labelMDP";
-            this.labelMDP.Size = new System.Drawing.Size(77, 13);
-            this.labelMDP.TabIndex = 1;
-            this.labelMDP.Text = "Mot de passe :";
+            this.lbNom.AutoSize = true;
+            this.lbNom.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbNom.Location = new System.Drawing.Point(12, 9);
+            this.lbNom.Name = "lbNom";
+            this.lbNom.Size = new System.Drawing.Size(78, 13);
+            this.lbNom.TabIndex = 3;
+            this.lbNom.Text = "SAMPLETEXT";
             // 
-            // nomUtil
+            // lbnbfiches
             // 
-            this.nomUtil.Location = new System.Drawing.Point(153, 25);
-            this.nomUtil.Name = "nomUtil";
-            this.nomUtil.Size = new System.Drawing.Size(153, 20);
-            this.nomUtil.TabIndex = 2;
+            this.lbnbfiches.AutoSize = true;
+            this.lbnbfiches.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbnbfiches.Location = new System.Drawing.Point(12, 35);
+            this.lbnbfiches.Name = "lbnbfiches";
+            this.lbnbfiches.Size = new System.Drawing.Size(78, 13);
+            this.lbnbfiches.TabIndex = 4;
+            this.lbnbfiches.Text = "SAMPLETEXT";
             // 
-            // mdp
+            // buttonCmplt
             // 
-            this.mdp.Location = new System.Drawing.Point(153, 91);
-            this.mdp.Name = "mdp";
-            this.mdp.PasswordChar = '*';
-            this.mdp.Size = new System.Drawing.Size(153, 20);
-            this.mdp.TabIndex = 3;
+            this.buttonCmplt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCmplt.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonCmplt.Location = new System.Drawing.Point(12, 458);
+            this.buttonCmplt.Name = "buttonCmplt";
+            this.buttonCmplt.Size = new System.Drawing.Size(75, 41);
+            this.buttonCmplt.TabIndex = 5;
+            this.buttonCmplt.Text = "Completer";
+            this.buttonCmplt.UseVisualStyleBackColor = true;
+            // 
+            // buttonCnlt
+            // 
+            this.buttonCnlt.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonCnlt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCnlt.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonCnlt.Location = new System.Drawing.Point(99, 458);
+            this.buttonCnlt.Name = "buttonCnlt";
+            this.buttonCnlt.Size = new System.Drawing.Size(75, 41);
+            this.buttonCnlt.TabIndex = 6;
+            this.buttonCnlt.Text = "Consulter";
+            this.buttonCnlt.UseVisualStyleBackColor = true;
             // 
             // FRemboursements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.mdp);
-            this.Controls.Add(this.nomUtil);
-            this.Controls.Add(this.labelMDP);
-            this.Controls.Add(this.labelnomUtil);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(684, 530);
+            this.Controls.Add(this.buttonCnlt);
+            this.Controls.Add(this.buttonCmplt);
+            this.Controls.Add(this.lbnbfiches);
+            this.Controls.Add(this.lbNom);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "FRemboursements";
             this.Text = "FRemboursements";
             this.Load += new System.EventHandler(this.FRemboursements_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsFiches)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,10 +135,12 @@
 
         #endregion
         private System.Windows.Forms.BindingSource bsvisiteur;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lbNom;
         private System.Windows.Forms.BindingSource bs;
-        private System.Windows.Forms.Label labelnomUtil;
-        private System.Windows.Forms.Label labelMDP;
-        private System.Windows.Forms.TextBox nomUtil;
-        private System.Windows.Forms.TextBox mdp;
+        private System.Windows.Forms.BindingSource bsFiches;
+        private System.Windows.Forms.Label lbnbfiches;
+        private System.Windows.Forms.Button buttonCmplt;
+        private System.Windows.Forms.Button buttonCnlt;
     }
 }

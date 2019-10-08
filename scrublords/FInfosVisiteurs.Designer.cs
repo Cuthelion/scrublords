@@ -55,6 +55,7 @@
             this.idLaboTextBox1 = new System.Windows.Forms.TextBox();
             this.nomLaboTextBox = new System.Windows.Forms.TextBox();
             this.bssecteur = new System.Windows.Forms.BindingSource(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             cpLabel = new System.Windows.Forms.Label();
             dateEmbaucheLabel = new System.Windows.Forms.Label();
             identifiantLabel = new System.Windows.Forms.Label();
@@ -279,11 +280,22 @@
             this.nomLaboTextBox.Size = new System.Drawing.Size(100, 20);
             this.nomLaboTextBox.TabIndex = 24;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(391, 161);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 25;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // FInfosVistiteurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(idLaboLabel1);
             this.Controls.Add(this.idLaboTextBox1);
             this.Controls.Add(nomLaboLabel);
@@ -332,5 +344,6 @@
         private System.Windows.Forms.TextBox nomLaboTextBox;
         private System.Windows.Forms.BindingSource bssecteur;
         private System.Windows.Forms.BindingSource bsvisiteur;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
