@@ -29,24 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvvisiteur = new System.Windows.Forms.DataGridView();
-            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvvisiteur)).BeginInit();
+            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvvisiteur
-            // 
-            this.dgvvisiteur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvvisiteur.Location = new System.Drawing.Point(20, 12);
-            this.dgvvisiteur.Name = "dgvvisiteur";
-            this.dgvvisiteur.Size = new System.Drawing.Size(737, 426);
-            this.dgvvisiteur.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -99,10 +89,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dgvvisiteur);
             this.Name = "FGestionVisiteur";
             this.Text = "FGestionVisiteur";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvvisiteur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,8 +98,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvvisiteur;
         private System.Windows.Forms.BindingSource bsvisiteur;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

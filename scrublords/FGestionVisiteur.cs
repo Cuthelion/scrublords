@@ -19,5 +19,10 @@ namespace scrublords
             dgvvisiteur.DataSource = Modele1.listeVisiteur();
             bsvisiteur.DataSource = dgvvisiteur;
         }
+
+        private void Dgvvisiteur_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

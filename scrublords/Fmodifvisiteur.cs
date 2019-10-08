@@ -17,5 +17,10 @@ namespace scrublords
             InitializeComponent();
             bsvisiteur.DataSource = Modele1.VisiteurConnecte;
         }
+
+        private void Fmodifvisiteur_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

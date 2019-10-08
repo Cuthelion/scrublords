@@ -40,6 +40,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Fmodifvisiteur";
             this.Text = "Fmodifvisiteur";
+            this.Load += new System.EventHandler(this.Fmodifvisiteur_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
             this.ResumeLayout(false);
 
