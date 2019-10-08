@@ -223,6 +223,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="RAPPORT.datasource" />
+    <None Include="Secteur1.datasource" />
     <None Include="Visiteur1.datasource" />
   </ItemGroup>
   <ItemGroup>
