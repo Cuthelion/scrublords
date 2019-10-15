@@ -98,6 +98,13 @@ namespace scrublords
         {
             return maConnexion.RAPPORT.ToList();
         }
+        public static Object listficheFrais(string id)
+        {
+            var LQuery = maConnexion.fichefrais.ToList()
+                         .Where(x => x.idVisiteur == id)
+                         .Select(x => new { x.mois, x.montantValide, x.dateModif, x.idEtat });
+            return LQuery.ToList();
+        }
     }
 }
 

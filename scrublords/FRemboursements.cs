@@ -16,11 +16,16 @@ namespace scrublords
         public FRemboursements()
         {
             InitializeComponent();
+            bsvisiteur.DataSource = Modele3.listficheFrais(Modele3.VisiteurConnecte3.idVisiteur);
+            dataGridView1.DataSource = bsvisiteur;
+            lbnbfiches.Text = "Vous avez actuellement " + bsvisiteur.Count.ToString() + " fiches de remboursements";
         }
 
         private void FRemboursements_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("scum");
+            lbNom.Text = "Bienvenue "+ Modele3.VisiteurConnecte3.prenom + ", voici vos fiches de remboursement";
+           
         }
+
     }
 }
