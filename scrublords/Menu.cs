@@ -18,7 +18,7 @@ namespace scrublords
         }
         private void Button1_Click(object sender, EventArgs e)
         {
-            Form Visiteurs = new FInfosVistiteurs();
+            Form Visiteurs = new FGestionVisiteur();
             Visiteurs.Show();
         }
         private void Button2_Click(object sender, EventArgs e)

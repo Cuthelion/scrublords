@@ -18,7 +18,10 @@ namespace scrublords
             InitializeComponent();
             //lesvisiteurs
             bsvisiteur.DataSource = Modele1.VisiteurConnecte;
-            bssecteur.DataSource = Modele1.VisiteurConnecte;
+            bssecteur.DataSource = Modele1.listeSecteur();
+
+
+            
         }
         private void Modif_Click(object sender, EventArgs e)
         {
@@ -33,9 +36,10 @@ namespace scrublords
         private void Modif_click_Click(object sender, EventArgs e)
         {
             Form modifvisiteur = new Fmodifvisiteur();
-            modifvisiteur.Show();
+            modifvisiteur.ShowDialog();
         }
 
+        
         
     }
 }

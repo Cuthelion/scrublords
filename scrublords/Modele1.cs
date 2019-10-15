@@ -11,7 +11,7 @@ namespace scrublords
     {
         private static connectScrubLords maConnexion;
         private static Visiteur visiteurConnecte;
-        private static bool connexionValide;
+        
 
         public static Visiteur VisiteurConnecte { get => visiteurConnecte; set => visiteurConnecte = value; }
 
@@ -107,9 +107,17 @@ namespace scrublords
             // Ecrire le code qui renvoie le message à afficher et mets à jour les variables utilisateurConnecte et connexionValide, la comparaison des mots de passes se fera via utilisateurConnecte.passwd.Substring(2).Equals(GetMd5Hash(mp))
             return message;
         }
-        public bool ModifMdp
+        public static bool verifLogin(string ID, string MDP)
         {
-
+            var MDPCry = "0x" + GetMd5Hash(MDP);
+            foreach (Visiteur util in maConnexion.Visiteur)
+            {
+                if (ID == util.idVisiteur && MDPCry == util.password)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

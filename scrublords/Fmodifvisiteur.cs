@@ -17,7 +17,7 @@ namespace scrublords
         {
             InitializeComponent();
             bsvisiteur.DataSource = Modele1.VisiteurConnecte;
-            
+
 
 
 
@@ -31,8 +31,19 @@ namespace scrublords
             Modele1.VisiteurConnecte.password = textboxmdp2.ToString();
             MessageBox.Show("mot de passe modifié");
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
+            
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.None;
+
+            MessageBox.Show("Annulation de la modification du mot de passe");
+            this.DialogResult = System.Windows.Forms.DialogResult.OK;
+        }
+        
+        
+        
         
     }
 }
