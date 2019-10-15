@@ -19,12 +19,8 @@ namespace scrublords
 
         private void FDetails_Load(object sender, EventArgs e)
         {
-
-            MEDECIN medecintemp = Modele3.leMedecinChoisi;
-
+            MEDECIN medecintemp = Modele2.leMedecinChoisi;
             tbId.Text = (medecintemp.idMedecin).ToString();
-
-
         }
     }
 }

@@ -9,6 +9,36 @@ namespace scrublords
     public static class Modele2
     {
         private static connectScrubLords maConnexion;
+        private static Visiteur visiteurConnecte2;
+
+        public static Visiteur VisiteurConnecte2 { get => visiteurConnecte2; set => visiteurConnecte2 = value; }
+        public static MEDECIN leMedecinChoisi;
+        public static RAPPORT leRapportChoisi;
+
+        public static void trouvVisiteurId(string id)
+        {
+            var LQuery = maConnexion.Visiteur.ToList()
+                           .Where(x => x.idVisiteur == id);
+
+            visiteurConnecte2 = (Visiteur)LQuery.ToList().First();
+        }
+
+        public static void trouverMedecinId(int id)
+        {
+            var LQuery = maConnexion.MEDECIN.ToList()
+                           .Where(x => x.idMedecin == id);
+
+            leMedecinChoisi = (MEDECIN)LQuery.ToList().First();
+        }
+
+        public static void trouverRapportId(int id)
+        {
+            var LQuery = maConnexion.RAPPORT.ToList()
+                           .Where(x => x.idRapport == id);
+
+            leRapportChoisi = (RAPPORT)LQuery.ToList().First();
+        }
+
         public static void init()
         {
             maConnexion = new connectScrubLords();
@@ -76,6 +106,13 @@ namespace scrublords
         public static List<RAPPORT> listeRapVis()
         {
             return maConnexion.RAPPORT.ToList();
+        }
+        public static Object listficheFrais(string id)
+        {
+            var LQuery = maConnexion.fichefrais.ToList()
+                         .Where(x => x.idVisiteur == id)
+                         .Select(x => new { x.mois, x.montantValide, x.dateModif, x.idEtat });
+            return LQuery.ToList();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace scrublords
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            Form RapportsVisite = new FRapportsVisite();
+            FRapportsVisite RapportsVisite = new FRapportsVisite();
             RapportsVisite.Show();
         }
     }
