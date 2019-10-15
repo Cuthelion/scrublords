@@ -10,6 +10,7 @@ namespace scrublords
     {
         private static connectScrubLords maConnexion;
         private static Visiteur visiteurConnecte3;
+        private static fichefrais fichefrais3;
 
         public static Visiteur VisiteurConnecte3 { get => visiteurConnecte3; set => visiteurConnecte3 = value; }
         public static MEDECIN leMedecinChoisi;
@@ -28,6 +29,13 @@ namespace scrublords
                            .Where(x => x.idMedecin == id);
 
             leMedecinChoisi = (MEDECIN)LQuery.ToList().First();
+        }
+        public static LigneFraisForfait trouveLignefrais(string id)
+        {
+            var LQuery = maConnexion.LigneFraisForfait.ToList()
+                .Where(x => x.idFraisForfait == id);
+
+            return (LigneFraisForfait)LQuery.ToList().First();
         }
 
         public static void init()
@@ -101,8 +109,7 @@ namespace scrublords
         public static Object listficheFrais(string id)
         {
             var LQuery = maConnexion.fichefrais.ToList()
-                         .Where(x => x.idVisiteur == id)
-                         .Select(x => new { x.mois, x.montantValide, x.dateModif, x.idEtat });
+                         .Where(x => x.idVisiteur == id);
             return LQuery.ToList();
         }
     }

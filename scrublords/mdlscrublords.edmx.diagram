@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a3a5d56a55254693a50777b4b2bc39c3" Name="Diagram1">
+      <Diagram DiagramId="a3a5d56a55254693a50777b4b2bc39c3" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="mdlScrubLords.Etat" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="mdlScrubLords.FAMILLE" Width="1.5" PointX="6" PointY="22.5" IsExpanded="true" />
         <EntityTypeShape EntityType="mdlScrubLords.fichefrais" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
