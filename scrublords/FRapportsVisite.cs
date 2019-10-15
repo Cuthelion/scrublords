@@ -18,8 +18,8 @@ namespace scrublords
             InitializeComponent();
             //LES RAPPORTS
 
-            bsRapports.DataSource = Modele3.listeRapVis();
-            bsOffrir.DataSource = Modele3.listeoffrir();
+            bsRapports.DataSource = Modele2.listeRapVis();
+            bsOffrir.DataSource = Modele2.listeoffrir();
             dgvOffrir.DataSource = bsOffrir;
 
             dgvOffrir.Columns[0].Visible = false;
@@ -33,16 +33,32 @@ namespace scrublords
 
         private void Rapport_Load(object sender, EventArgs e)
         {
+
+            System.Type type = bsRapports.Current.GetType();
+            var id = (int)type.GetProperty("idRapport").GetValue(bsRapports.Current, null);
+            Modele2.trouverRapportId(id);
+            RAPPORT RapportTemp = Modele2.leRapportChoisi;
+
+
+            //Infos Rapport
+
+            tbNumero.Text = (RapportTemp.idRapport).ToString();
+            rtbBilan.Text = RapportTemp.bilan;
+            dtpDate.Value = (DateTime)RapportTemp.dateRapport;            
+
             //Les Praticiens
             cbPraticien.ValueMember = "idMedecin";
             cbPraticien.DisplayMember = "nom";
-            bsMedecins.DataSource = Modele3.listeMedecins();
+            bsMedecins.DataSource = Modele2.listeMedecins();
             cbPraticien.DataSource = bsMedecins;
+            cbPraticien.Text = string.Concat(RapportTemp.MEDECIN.nom, " ", RapportTemp.MEDECIN.prenom);
             //Les Motifs
             cbMotif.ValueMember = "idMotif";
             cbMotif.DisplayMember = "libMotif";
-            bsMotifs.DataSource = Modele3.listeMotif();
+            bsMotifs.DataSource = Modele2.listeMotif();
             cbMotif.DataSource = bsMotifs;
+            cbMotif.Text = RapportTemp.MOTIF.libMotif;
+
         }
       
         private void CbPraticien_Format(object sender, ListControlConvertEventArgs e)
@@ -55,7 +71,7 @@ namespace scrublords
         {
             System.Type type = bsMedecins.Current.GetType();
             var id = (int)type.GetProperty("idMedecin").GetValue(bsMedecins.Current, null);
-            Modele3.trouverMedecinId(id);
+            Modele2.trouverMedecinId(id);
             Form Details = new FDetails();
             Details.ShowDialog();
         }

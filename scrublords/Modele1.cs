@@ -107,9 +107,9 @@ namespace scrublords
             // Ecrire le code qui renvoie le message à afficher et mets à jour les variables utilisateurConnecte et connexionValide, la comparaison des mots de passes se fera via utilisateurConnecte.passwd.Substring(2).Equals(GetMd5Hash(mp))
             return message;
         }
-        public bool ModifMdp
+        public static bool ModifMdp()
         {
-
+            return true;
         }
     }
 }
