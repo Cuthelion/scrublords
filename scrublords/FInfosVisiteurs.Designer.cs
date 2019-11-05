@@ -37,6 +37,7 @@
             System.Windows.Forms.Label villeLabel;
             System.Windows.Forms.Label idLaboLabel1;
             this.dateEmbaucheTextBox = new System.Windows.Forms.TextBox();
+            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
             this.idVisiteurTextBox = new System.Windows.Forms.TextBox();
             this.nomTextBox = new System.Windows.Forms.TextBox();
             this.prenomTextBox = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.bssecteur = new System.Windows.Forms.BindingSource(this.components);
-            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
             dateEmbaucheLabel = new System.Windows.Forms.Label();
             idVisiteurLabel = new System.Windows.Forms.Label();
             nomLabel = new System.Windows.Forms.Label();
@@ -54,8 +54,8 @@
             rueLabel = new System.Windows.Forms.Label();
             villeLabel = new System.Windows.Forms.Label();
             idLaboLabel1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).BeginInit();
             this.SuspendLayout();
             // 
             // dateEmbaucheLabel
@@ -129,6 +129,10 @@
             this.dateEmbaucheTextBox.Size = new System.Drawing.Size(100, 20);
             this.dateEmbaucheTextBox.TabIndex = 4;
             // 
+            // bsvisiteur
+            // 
+            this.bsvisiteur.DataSource = typeof(scrublords.Visiteur);
+            // 
             // idVisiteurTextBox
             // 
             this.idVisiteurTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsvisiteur, "idVisiteur", true));
@@ -197,10 +201,6 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Information du visiteur : ";
             // 
-            // bsvisiteur
-            // 
-            this.bsvisiteur.DataSource = typeof(scrublords.Visiteur);
-            // 
             // FInfosVistiteurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,8 +226,9 @@
             this.Controls.Add(this.villeTextBox);
             this.Name = "FInfosVistiteurs";
             this.Text = "FInfosVisiteurs";
-            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,6 +13,7 @@ namespace scrublords
 {
     public partial class FGestionVisiteur : Form
     {
+        static int attempt = 3;
         public FGestionVisiteur()
         {
             InitializeComponent();
@@ -21,30 +22,20 @@ namespace scrublords
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Data Source=Srublords_PPE3;Initial Catalog=BDD;User ID=Scrublords;Password=Btssio2");
-            string query = " Select password From VISITEUR ";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.Add("@nomvisiteur", textBox1);
-            command.Parameters.Add("@password", textBox2);
-            connection.Open();
-            string result = (string)command.ExecuteScalar();
+            
+            //FGestionVisiteur.Close();  
+        }
+    }
+}
+            
+                                    
            
-            connection.Close();
+        
 
 
 
 
 
-
-        }
-
-
-
-
-           Form InfosVistiteurs = new FInfosVistiteurs();
-           InfosVistiteurs.ShowDialog();
-        }
 
         
-    }
-    }
+    
