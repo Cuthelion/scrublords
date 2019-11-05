@@ -31,7 +31,6 @@ namespace scrublords
         {
             System.Type type = bsvisiteur.Current.GetType();
             string mois = (string)type.GetProperty("mois").GetValue(bsvisiteur.Current, null);
-            MessageBox.Show(bsvisiteur.Current.GetType().ToString());
             FFicheRemboursementCompleter Fiche = new FFicheRemboursementCompleter((fichefrais)bsvisiteur.Current);
             Fiche.ShowDialog();
         }

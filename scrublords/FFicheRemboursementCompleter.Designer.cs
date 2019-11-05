@@ -159,6 +159,7 @@
             this.Fermer.TabIndex = 7;
             this.Fermer.Text = "Fermer";
             this.Fermer.UseVisualStyleBackColor = true;
+            this.Fermer.Click += new System.EventHandler(this.Fermer_Click);
             // 
             // label4
             // 
@@ -300,11 +301,6 @@
             this.quaNui.Location = new System.Drawing.Point(163, 192);
             this.quaNui.Maximum = new decimal(new int[] {
             31,
-            0,
-            0,
-            0});
-            this.quaNui.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
