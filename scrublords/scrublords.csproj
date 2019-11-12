@@ -75,11 +75,11 @@
     <Compile Include="FAMILLE.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
-    <Compile Include="FFicheRemboursement.cs">
+    <Compile Include="FFicheRemboursementCompleter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FFicheRemboursement.Designer.cs">
-      <DependentUpon>FFicheRemboursement.cs</DependentUpon>
+    <Compile Include="FFicheRemboursementCompleter.Designer.cs">
+      <DependentUpon>FFicheRemboursementCompleter.cs</DependentUpon>
     </Compile>
     <Compile Include="FGestionVisiteur.cs">
       <SubType>Form</SubType>
@@ -160,6 +160,7 @@
       <DependentUpon>mdlscrublords.tt</DependentUpon>
     </Compile>
     <Compile Include="Modele1.cs" />
+    <Compile Include="Modele2.cs" />
     <Compile Include="Modele3.cs" />
     <Compile Include="MOTIF.cs">
       <DependentUpon>mdlscrublords.tt</DependentUpon>
@@ -189,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FDetails.resx">
       <DependentUpon>FDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFicheRemboursementCompleter.resx">
+      <DependentUpon>FFicheRemboursementCompleter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGestionVisiteur.resx">
       <DependentUpon>FGestionVisiteur.cs</DependentUpon>

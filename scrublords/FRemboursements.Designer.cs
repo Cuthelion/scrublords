@@ -65,6 +65,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(660, 392);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.DataGridView1_CurrentCellChanged);
             // 
             // lbNom
             // 
@@ -94,7 +95,7 @@
             this.buttonCmplt.Name = "buttonCmplt";
             this.buttonCmplt.Size = new System.Drawing.Size(75, 41);
             this.buttonCmplt.TabIndex = 5;
-            this.buttonCmplt.Text = "Completer";
+            this.buttonCmplt.Text = "Consulter";
             this.buttonCmplt.UseVisualStyleBackColor = true;
             // 
             // buttonCnlt
@@ -106,8 +107,9 @@
             this.buttonCnlt.Name = "buttonCnlt";
             this.buttonCnlt.Size = new System.Drawing.Size(75, 41);
             this.buttonCnlt.TabIndex = 6;
-            this.buttonCnlt.Text = "Consulter";
+            this.buttonCnlt.Text = "Completer";
             this.buttonCnlt.UseVisualStyleBackColor = true;
+            this.buttonCnlt.Click += new System.EventHandler(this.ButtonCnlt_Click);
             // 
             // FRemboursements
             // 

@@ -27,5 +27,16 @@ namespace scrublords
            
         }
 
+        private void ButtonCnlt_Click(object sender, EventArgs e)
+        {
+            System.Type type = bsvisiteur.Current.GetType();
+            string mois = (string)type.GetProperty("mois").GetValue(bsvisiteur.Current, null);
+            FFicheRemboursementCompleter Fiche = new FFicheRemboursementCompleter((fichefrais)bsvisiteur.Current);
+            Fiche.ShowDialog();
+        }
+
+        private void DataGridView1_CurrentCellChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -29,6 +29,12 @@ namespace scrublords
 
             leMedecinChoisi = (MEDECIN)LQuery.ToList().First();
         }
+        public static LigneFraisForfait ligneFraisForfait(string idFraisForfait, string id, string mois)
+        {
+            var LQuery = maConnexion.LigneFraisForfait.ToList()
+                .Where(x => x.idFraisForfait == idFraisForfait && x.idVisiteur == id && x.mois == mois);
+            return (LigneFraisForfait)LQuery.ToList().First();
+        }
 
         public static void init()
         {
@@ -101,9 +107,55 @@ namespace scrublords
         public static Object listficheFrais(string id)
         {
             var LQuery = maConnexion.fichefrais.ToList()
-                         .Where(x => x.idVisiteur == id)
-                         .Select(x => new { x.mois, x.montantValide, x.dateModif, x.idEtat });
+                         .Where(x => x.idVisiteur == id);
             return LQuery.ToList();
+        }
+        public static bool modifFicheFrais(fichefrais fiche, decimal montantValide)
+        {
+            bool retour = true;
+            try
+            {
+                fiche.montantValide = montantValide;
+                maConnexion.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                retour = false;
+            }
+            return retour;
+        }
+        public static bool modifLigneForfait(LigneFraisForfait ligne, int montant)
+        {
+            bool retour = true;
+            try
+            {
+                ligne.quantite = montant;
+                maConnexion.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                retour = false;
+            }
+            return retour;
+        }
+        public static bool insertLigneForfait(string id, string mois, string idForfait, int quantite)
+        {
+            bool retour = true;
+            try
+            {
+                LigneFraisForfait ligneForfait = new LigneFraisForfait();
+                ligneForfait.idVisiteur = id;
+                ligneForfait.mois = mois;
+                ligneForfait.idFraisForfait = idForfait;
+                ligneForfait.quantite = quantite;
+                maConnexion.LigneFraisForfait.Add(ligneForfait);
+                maConnexion.SaveChanges();
+            }
+            catch(Exception e)
+            {
+                retour = false;
+            }
+            return retour;
         }
     }
 }
