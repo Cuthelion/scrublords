@@ -35,6 +35,13 @@ namespace scrublords
                 .Where(x => x.idFraisForfait == idFraisForfait && x.idVisiteur == id && x.mois == mois);
             return (LigneFraisForfait)LQuery.ToList().First();
         }
+        public static List<LigneFraisHorsForfait> ligneFraisHorsForfait(string id, string mois)
+        {
+            var LQuery = maConnexion.LigneFraisHorsForfait.ToList()
+                .Where(x => x.mois == mois && x.idVisiteur == id);
+            return LQuery.ToList();
+        }
+        
 
         public static void init()
         {
@@ -118,7 +125,7 @@ namespace scrublords
                 fiche.montantValide = montantValide;
                 maConnexion.SaveChanges();
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 retour = false;
             }
@@ -132,7 +139,7 @@ namespace scrublords
                 ligne.quantite = montant;
                 maConnexion.SaveChanges();
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 retour = false;
             }
@@ -151,7 +158,46 @@ namespace scrublords
                 maConnexion.LigneFraisForfait.Add(ligneForfait);
                 maConnexion.SaveChanges();
             }
-            catch(Exception e)
+            catch(Exception)
+            {
+                retour = false;
+            }
+            return retour;
+        }
+        public static bool modifLigneHorsForfait(LigneFraisHorsForfait ligne, decimal montant, string libelle, DateTime date, int id)
+        {
+            bool retour = true;
+            try
+            {
+                if (ligne.id == id)
+                {
+                    ligne.libelle = libelle;
+                    ligne.montant = montant;
+                    ligne.date = date;
+                    maConnexion.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                retour = false;
+            }
+            return retour;
+        }
+        public static bool insertLigneHorsForfait(string id, string mois, string libelle, DateTime date, decimal montant)
+        {
+            bool retour = true;
+            try
+            {
+                LigneFraisHorsForfait lfhf = new LigneFraisHorsForfait();
+                lfhf.idVisiteur = id;
+                lfhf.mois = mois;
+                lfhf.libelle = libelle;
+                lfhf.date = date;
+                lfhf.montant = montant;
+                maConnexion.LigneFraisHorsForfait.Add(lfhf);
+                maConnexion.SaveChanges();
+            }
+            catch (Exception)
             {
                 retour = false;
             }

@@ -55,32 +55,32 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lfhf1 = new System.Windows.Forms.TextBox();
+            this.lfhf5 = new System.Windows.Forms.TextBox();
+            this.lfhf4 = new System.Windows.Forms.TextBox();
+            this.lfhf3 = new System.Windows.Forms.TextBox();
+            this.lfhf2 = new System.Windows.Forms.TextBox();
+            this.montant1 = new System.Windows.Forms.NumericUpDown();
+            this.montant4 = new System.Windows.Forms.NumericUpDown();
+            this.montant3 = new System.Windows.Forms.NumericUpDown();
+            this.montant2 = new System.Windows.Forms.NumericUpDown();
+            this.montant5 = new System.Windows.Forms.NumericUpDown();
+            this.date2 = new System.Windows.Forms.DateTimePicker();
+            this.date5 = new System.Windows.Forms.DateTimePicker();
+            this.date4 = new System.Windows.Forms.DateTimePicker();
+            this.date3 = new System.Windows.Forms.DateTimePicker();
+            this.date1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.monUniNui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monUniRep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monUniKil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaNui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaRep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaKil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant5)).BeginInit();
             this.SuspendLayout();
             // 
             // Visiteur
@@ -410,166 +410,166 @@
             this.label13.TabIndex = 29;
             this.label13.Text = "Montant";
             // 
-            // textBox1
+            // lfhf1
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 347);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 20);
-            this.textBox1.TabIndex = 35;
+            this.lfhf1.Location = new System.Drawing.Point(188, 347);
+            this.lfhf1.Name = "lfhf1";
+            this.lfhf1.Size = new System.Drawing.Size(286, 20);
+            this.lfhf1.TabIndex = 35;
             // 
-            // textBox2
+            // lfhf5
             // 
-            this.textBox2.Location = new System.Drawing.Point(188, 451);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(286, 20);
-            this.textBox2.TabIndex = 36;
+            this.lfhf5.Location = new System.Drawing.Point(188, 451);
+            this.lfhf5.Name = "lfhf5";
+            this.lfhf5.Size = new System.Drawing.Size(286, 20);
+            this.lfhf5.TabIndex = 36;
             // 
-            // textBox3
+            // lfhf4
             // 
-            this.textBox3.Location = new System.Drawing.Point(188, 425);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(286, 20);
-            this.textBox3.TabIndex = 37;
+            this.lfhf4.Location = new System.Drawing.Point(188, 425);
+            this.lfhf4.Name = "lfhf4";
+            this.lfhf4.Size = new System.Drawing.Size(286, 20);
+            this.lfhf4.TabIndex = 37;
             // 
-            // textBox4
+            // lfhf3
             // 
-            this.textBox4.Location = new System.Drawing.Point(188, 399);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(286, 20);
-            this.textBox4.TabIndex = 38;
+            this.lfhf3.Location = new System.Drawing.Point(188, 399);
+            this.lfhf3.Name = "lfhf3";
+            this.lfhf3.Size = new System.Drawing.Size(286, 20);
+            this.lfhf3.TabIndex = 38;
             // 
-            // textBox5
+            // lfhf2
             // 
-            this.textBox5.Location = new System.Drawing.Point(188, 373);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(286, 20);
-            this.textBox5.TabIndex = 39;
+            this.lfhf2.Location = new System.Drawing.Point(188, 373);
+            this.lfhf2.Name = "lfhf2";
+            this.lfhf2.Size = new System.Drawing.Size(286, 20);
+            this.lfhf2.TabIndex = 39;
             // 
-            // numericUpDown1
+            // montant1
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(491, 347);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.montant1.DecimalPlaces = 2;
+            this.montant1.Location = new System.Drawing.Point(491, 347);
+            this.montant1.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(93, 20);
-            this.numericUpDown1.TabIndex = 40;
+            this.montant1.Name = "montant1";
+            this.montant1.Size = new System.Drawing.Size(93, 20);
+            this.montant1.TabIndex = 40;
             // 
-            // numericUpDown3
+            // montant4
             // 
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Location = new System.Drawing.Point(491, 425);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.montant4.DecimalPlaces = 2;
+            this.montant4.Location = new System.Drawing.Point(491, 425);
+            this.montant4.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(93, 20);
-            this.numericUpDown3.TabIndex = 42;
+            this.montant4.Name = "montant4";
+            this.montant4.Size = new System.Drawing.Size(93, 20);
+            this.montant4.TabIndex = 42;
             // 
-            // numericUpDown4
+            // montant3
             // 
-            this.numericUpDown4.DecimalPlaces = 2;
-            this.numericUpDown4.Location = new System.Drawing.Point(491, 399);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.montant3.DecimalPlaces = 2;
+            this.montant3.Location = new System.Drawing.Point(491, 399);
+            this.montant3.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(93, 20);
-            this.numericUpDown4.TabIndex = 43;
+            this.montant3.Name = "montant3";
+            this.montant3.Size = new System.Drawing.Size(93, 20);
+            this.montant3.TabIndex = 43;
             // 
-            // numericUpDown5
+            // montant2
             // 
-            this.numericUpDown5.DecimalPlaces = 2;
-            this.numericUpDown5.Location = new System.Drawing.Point(491, 373);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
+            this.montant2.DecimalPlaces = 2;
+            this.montant2.Location = new System.Drawing.Point(491, 373);
+            this.montant2.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(93, 20);
-            this.numericUpDown5.TabIndex = 44;
+            this.montant2.Name = "montant2";
+            this.montant2.Size = new System.Drawing.Size(93, 20);
+            this.montant2.TabIndex = 44;
             // 
-            // numericUpDown6
+            // montant5
             // 
-            this.numericUpDown6.DecimalPlaces = 2;
-            this.numericUpDown6.Location = new System.Drawing.Point(491, 451);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
+            this.montant5.DecimalPlaces = 2;
+            this.montant5.Location = new System.Drawing.Point(491, 451);
+            this.montant5.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(93, 20);
-            this.numericUpDown6.TabIndex = 45;
+            this.montant5.Name = "montant5";
+            this.montant5.Size = new System.Drawing.Size(93, 20);
+            this.montant5.TabIndex = 45;
             // 
-            // dateTimePicker2
+            // date2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 373);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(177, 20);
-            this.dateTimePicker2.TabIndex = 46;
-            this.dateTimePicker2.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.date2.Location = new System.Drawing.Point(3, 373);
+            this.date2.Name = "date2";
+            this.date2.Size = new System.Drawing.Size(177, 20);
+            this.date2.TabIndex = 46;
+            this.date2.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
-            // dateTimePicker3
+            // date5
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(3, 451);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(177, 20);
-            this.dateTimePicker3.TabIndex = 47;
-            this.dateTimePicker3.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.date5.Location = new System.Drawing.Point(3, 451);
+            this.date5.Name = "date5";
+            this.date5.Size = new System.Drawing.Size(177, 20);
+            this.date5.TabIndex = 47;
+            this.date5.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
-            // dateTimePicker4
+            // date4
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(3, 425);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(177, 20);
-            this.dateTimePicker4.TabIndex = 48;
-            this.dateTimePicker4.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.date4.Location = new System.Drawing.Point(3, 425);
+            this.date4.Name = "date4";
+            this.date4.Size = new System.Drawing.Size(177, 20);
+            this.date4.TabIndex = 48;
+            this.date4.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
-            // dateTimePicker5
+            // date3
             // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(3, 399);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(177, 20);
-            this.dateTimePicker5.TabIndex = 49;
-            this.dateTimePicker5.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.date3.Location = new System.Drawing.Point(3, 399);
+            this.date3.Name = "date3";
+            this.date3.Size = new System.Drawing.Size(177, 20);
+            this.date3.TabIndex = 49;
+            this.date3.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
-            // dateTimePicker1
+            // date1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 347);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(177, 20);
-            this.dateTimePicker1.TabIndex = 50;
-            this.dateTimePicker1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.date1.Location = new System.Drawing.Point(3, 347);
+            this.date1.Name = "date1";
+            this.date1.Size = new System.Drawing.Size(177, 20);
+            this.date1.TabIndex = 50;
+            this.date1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // FFicheRemboursementCompleter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 532);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dateTimePicker5);
-            this.Controls.Add(this.dateTimePicker4);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.numericUpDown6);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.date1);
+            this.Controls.Add(this.date3);
+            this.Controls.Add(this.date4);
+            this.Controls.Add(this.date5);
+            this.Controls.Add(this.date2);
+            this.Controls.Add(this.montant5);
+            this.Controls.Add(this.montant2);
+            this.Controls.Add(this.montant3);
+            this.Controls.Add(this.montant4);
+            this.Controls.Add(this.montant1);
+            this.Controls.Add(this.lfhf2);
+            this.Controls.Add(this.lfhf3);
+            this.Controls.Add(this.lfhf4);
+            this.Controls.Add(this.lfhf5);
+            this.Controls.Add(this.lfhf1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -605,11 +605,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.quaNui)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaRep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaKil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.montant5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -644,20 +644,20 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox lfhf1;
+        private System.Windows.Forms.TextBox lfhf5;
+        private System.Windows.Forms.TextBox lfhf4;
+        private System.Windows.Forms.TextBox lfhf3;
+        private System.Windows.Forms.TextBox lfhf2;
+        private System.Windows.Forms.NumericUpDown montant1;
+        private System.Windows.Forms.NumericUpDown montant4;
+        private System.Windows.Forms.NumericUpDown montant3;
+        private System.Windows.Forms.NumericUpDown montant2;
+        private System.Windows.Forms.NumericUpDown montant5;
+        private System.Windows.Forms.DateTimePicker date2;
+        private System.Windows.Forms.DateTimePicker date5;
+        private System.Windows.Forms.DateTimePicker date4;
+        private System.Windows.Forms.DateTimePicker date3;
+        private System.Windows.Forms.DateTimePicker date1;
     }
 }
