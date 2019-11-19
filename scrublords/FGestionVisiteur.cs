@@ -13,17 +13,18 @@ namespace scrublords
 {
     public partial class FGestionVisiteur : Form
     {
-        static int attempt = 3;
+
         public FGestionVisiteur()
         {
             InitializeComponent();
-            bsvisiteur.DataSource = Modele1.VisiteurConnecte;
+            //bsvisiteur.DataSource = Modele1.VisiteurConnecte;
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
+
             //FGestionVisiteur.Close();  
+            Form infosvisiteur = new FInfosVistiteurs();
         }
     }
 }

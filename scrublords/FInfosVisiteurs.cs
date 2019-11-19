@@ -16,12 +16,61 @@ namespace scrublords
         public FInfosVistiteurs()
         {
             InitializeComponent();
-            //lesvisiteurs
-            bsvisiteur.DataSource = Modele1.VisiteurConnecte;
-            bssecteur.DataSource = Modele1.listeSecteur();
+            MessageBox.Show(Modele1.listeLabo().ToString());
+            idVisiteurTextBox.Text = Modele1.VisiteurConnecte.idVisiteur;
+            nomTextBox.Text = Modele1.VisiteurConnecte.nom;
+            prenomTextBox.Text = Modele1.VisiteurConnecte.prenom;
+            nomLaboTextBox.Text = Modele1.VisiteurConnecte.Laboratoire.nomLabo;
+            rueTextBox.Text = Modele1.VisiteurConnecte.rue;
+            villeTextBox.Text = Modele1.VisiteurConnecte.ville;
+           // montantValideTextBox.Text = Modele1.VisiteurConnecte.fichefrais.montantvalide;
+            dateEmbaucheTextBox.Text = Modele1.VisiteurConnecte.dateEmbauche;
 
 
-            
+            try 
+            {
+                if (Modele1.unLabo(Modele1.VisiteurConnecte) != null)
+                {
+                    idVisiteurTextBox.Text = "lasagne";
+                }
+                if (Modele1.unLabo(Modele1.VisiteurConnecte) != null)
+                {
+                    Form fmodif = new Fmodifinfossecteur();
+                    Form Factif = new Factifvisiteur();
+                }
+            }
+            catch (Exception )
+            {
+
+            }
+            try
+            {
+                if (Modele1.unSecteur(Modele1.VisiteurConnecte) != null)
+                {
+                    idVisiteurTextBox.Text = "lasagne";
+                }
+                if (Modele1.unSecteur(Modele1.VisiteurConnecte) != null)
+                {
+                    Form Factif = new Factifvisiteur();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                if (Modele1.uneRegion(Modele1.VisiteurConnecte) != null)
+                {
+                    idVisiteurTextBox.Text = "lasagne";
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+
+
         }
         private void Modif_Click(object sender, EventArgs e)
         {
@@ -36,9 +85,12 @@ namespace scrublords
         private void Modif_click_Click(object sender, EventArgs e)
         {
             Form modifvisiteur = new Fmodifvisiteur();
-            modifvisiteur.ShowDialog();
+            modifvisiteur.ShowDialog(); 
         }
 
-        
+        private void FInfosVistiteurs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

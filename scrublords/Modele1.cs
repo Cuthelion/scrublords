@@ -119,6 +119,24 @@ namespace scrublords
             }
             return false;
         }
+        public static Laboratoire unLabo(Visiteur v)
+        {
+            var LQuery = maConnexion.Laboratoire.ToList()
+                .Where(x => x.Visiteur == v);
+            return LQuery.ToList().First();
+        }
+        public static Secteur unSecteur(Visiteur v)
+        {
+            var LQuery = maConnexion.Secteur.ToList()
+                .Where(x => x.Visiteur == v);
+            return LQuery.ToList().First();
+        }
+        public static Region uneRegion(Visiteur v)
+        {
+            var LQuery = maConnexion.Region.ToList()
+                .Where(x => x.Visiteur == v);
+            return LQuery.ToList().First();
+        }
     }
 }
 

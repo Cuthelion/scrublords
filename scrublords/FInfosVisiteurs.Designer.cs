@@ -36,8 +36,11 @@
             System.Windows.Forms.Label rueLabel;
             System.Windows.Forms.Label villeLabel;
             System.Windows.Forms.Label idLaboLabel1;
+            System.Windows.Forms.Label montantValideLabel;
+            System.Windows.Forms.Label nomLaboLabel;
+            System.Windows.Forms.Label idVisiteurLabel1;
+            System.Windows.Forms.Label labelTest;
             this.dateEmbaucheTextBox = new System.Windows.Forms.TextBox();
-            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
             this.idVisiteurTextBox = new System.Windows.Forms.TextBox();
             this.nomTextBox = new System.Windows.Forms.TextBox();
             this.prenomTextBox = new System.Windows.Forms.TextBox();
@@ -46,7 +49,11 @@
             this.idLaboTextBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.bssecteur = new System.Windows.Forms.BindingSource(this.components);
+            this.montantValideTextBox = new System.Windows.Forms.TextBox();
+            this.nomLaboTextBox = new System.Windows.Forms.TextBox();
+            this.idVisiteurTextBox1 = new System.Windows.Forms.TextBox();
+            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
+            this.fichefraisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             dateEmbaucheLabel = new System.Windows.Forms.Label();
             idVisiteurLabel = new System.Windows.Forms.Label();
             nomLabel = new System.Windows.Forms.Label();
@@ -54,8 +61,12 @@
             rueLabel = new System.Windows.Forms.Label();
             villeLabel = new System.Windows.Forms.Label();
             idLaboLabel1 = new System.Windows.Forms.Label();
+            montantValideLabel = new System.Windows.Forms.Label();
+            nomLaboLabel = new System.Windows.Forms.Label();
+            idVisiteurLabel1 = new System.Windows.Forms.Label();
+            labelTest = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fichefraisBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateEmbaucheLabel
@@ -115,11 +126,48 @@
             // idLaboLabel1
             // 
             idLaboLabel1.AutoSize = true;
-            idLaboLabel1.Location = new System.Drawing.Point(546, 156);
+            idLaboLabel1.Location = new System.Drawing.Point(534, 152);
             idLaboLabel1.Name = "idLaboLabel1";
             idLaboLabel1.Size = new System.Drawing.Size(45, 13);
             idLaboLabel1.TabIndex = 21;
             idLaboLabel1.Text = "id Labo:";
+            // 
+            // montantValideLabel
+            // 
+            montantValideLabel.AutoSize = true;
+            montantValideLabel.Location = new System.Drawing.Point(17, 279);
+            montantValideLabel.Name = "montantValideLabel";
+            montantValideLabel.Size = new System.Drawing.Size(80, 13);
+            montantValideLabel.TabIndex = 31;
+            montantValideLabel.Text = "montant Valide:";
+            // 
+            // nomLaboLabel
+            // 
+            nomLaboLabel.AutoSize = true;
+            nomLaboLabel.Location = new System.Drawing.Point(344, 181);
+            nomLaboLabel.Name = "nomLaboLabel";
+            nomLaboLabel.Size = new System.Drawing.Size(57, 13);
+            nomLaboLabel.TabIndex = 32;
+            nomLaboLabel.Text = "nom Labo:";
+            // 
+            // idVisiteurLabel1
+            // 
+            idVisiteurLabel1.AutoSize = true;
+            idVisiteurLabel1.Location = new System.Drawing.Point(53, 314);
+            idVisiteurLabel1.Name = "idVisiteurLabel1";
+            idVisiteurLabel1.Size = new System.Drawing.Size(55, 13);
+            idVisiteurLabel1.TabIndex = 33;
+            idVisiteurLabel1.Text = "id Visiteur:";
+            // 
+            // labelTest
+            // 
+            labelTest.AutoSize = true;
+            labelTest.Location = new System.Drawing.Point(321, 258);
+            labelTest.Name = "labelTest";
+            labelTest.Size = new System.Drawing.Size(55, 13);
+            labelTest.TabIndex = 35;
+            labelTest.Text = "id Visiteur:";
+            labelTest.Visible = false;
             // 
             // dateEmbaucheTextBox
             // 
@@ -128,10 +176,6 @@
             this.dateEmbaucheTextBox.Name = "dateEmbaucheTextBox";
             this.dateEmbaucheTextBox.Size = new System.Drawing.Size(100, 20);
             this.dateEmbaucheTextBox.TabIndex = 4;
-            // 
-            // bsvisiteur
-            // 
-            this.bsvisiteur.DataSource = typeof(scrublords.Visiteur);
             // 
             // idVisiteurTextBox
             // 
@@ -183,7 +227,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(430, 199);
+            this.button1.Location = new System.Drawing.Point(463, 233);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 23);
             this.button1.TabIndex = 25;
@@ -201,13 +245,51 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Information du visiteur : ";
             // 
+            // montantValideTextBox
+            // 
+            this.montantValideTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fichefraisBindingSource, "montantValide", true));
+            this.montantValideTextBox.Location = new System.Drawing.Point(114, 272);
+            this.montantValideTextBox.Name = "montantValideTextBox";
+            this.montantValideTextBox.Size = new System.Drawing.Size(100, 20);
+            this.montantValideTextBox.TabIndex = 32;
+            // 
+            // nomLaboTextBox
+            // 
+            this.nomLaboTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsvisiteur, "Laboratoire.nomLabo", true));
+            this.nomLaboTextBox.Location = new System.Drawing.Point(419, 181);
+            this.nomLaboTextBox.Name = "nomLaboTextBox";
+            this.nomLaboTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomLaboTextBox.TabIndex = 33;
+            // 
+            // idVisiteurTextBox1
+            // 
+            this.idVisiteurTextBox1.Location = new System.Drawing.Point(114, 311);
+            this.idVisiteurTextBox1.Name = "idVisiteurTextBox1";
+            this.idVisiteurTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.idVisiteurTextBox1.TabIndex = 34;
+            // 
+            // bsvisiteur
+            // 
+            this.bsvisiteur.DataSource = typeof(scrublords.Visiteur);
+            // 
+            // fichefraisBindingSource
+            // 
+            this.fichefraisBindingSource.DataSource = typeof(scrublords.fichefrais);
+            // 
             // FInfosVistiteurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::scrublords.Properties.Resources.logo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 313);
+            this.ClientSize = new System.Drawing.Size(801, 555);
+            this.Controls.Add(labelTest);
+            this.Controls.Add(idVisiteurLabel1);
+            this.Controls.Add(this.idVisiteurTextBox1);
+            this.Controls.Add(nomLaboLabel);
+            this.Controls.Add(this.nomLaboTextBox);
+            this.Controls.Add(montantValideLabel);
+            this.Controls.Add(this.montantValideTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLaboLabel1);
@@ -226,9 +308,9 @@
             this.Controls.Add(this.villeTextBox);
             this.Name = "FInfosVistiteurs";
             this.Text = "FInfosVisiteurs";
-
+            this.Load += new System.EventHandler(this.FInfosVistiteurs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bssecteur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fichefraisBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +327,9 @@
         private System.Windows.Forms.BindingSource bsvisiteur;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource bssecteur;
+        private System.Windows.Forms.BindingSource fichefraisBindingSource;
+        private System.Windows.Forms.TextBox montantValideTextBox;
+        private System.Windows.Forms.TextBox nomLaboTextBox;
+        private System.Windows.Forms.TextBox idVisiteurTextBox1;
     }
 }
