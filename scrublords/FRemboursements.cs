@@ -33,6 +33,8 @@ namespace scrublords
             string mois = (string)type.GetProperty("mois").GetValue(bsvisiteur.Current, null);
             FFicheRemboursementCompleter Fiche = new FFicheRemboursementCompleter((fichefrais)bsvisiteur.Current);
             Fiche.ShowDialog();
+            bsvisiteur.MoveLast();
+            bsvisiteur.MoveFirst();
         }
 
         private void DataGridView1_CurrentCellChanged(object sender, EventArgs e)
