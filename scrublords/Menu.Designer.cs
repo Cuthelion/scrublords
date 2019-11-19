@@ -67,7 +67,8 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 21.25F);
-            this.label1.Location = new System.Drawing.Point(544, 19);
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(493, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 33);
             this.label1.TabIndex = 3;

@@ -23,7 +23,13 @@ namespace scrublords
             nomLaboTextBox.Text = Modele1.VisiteurConnecte.Laboratoire.nomLabo;
             rueTextBox.Text = Modele1.VisiteurConnecte.rue;
             villeTextBox.Text = Modele1.VisiteurConnecte.ville;
-           // montantValideTextBox.Text = Modele1.VisiteurConnecte.fichefrais.montantvalide;
+            foreach (fichefrais f in  Modele1.listeficheFrais())
+            {
+                if(f.idVisiteur == Modele1.VisiteurConnecte.idVisiteur)
+                {
+                    montantValideTextBox.Text = f.montantValide.ToString();
+                }
+            }
             dateEmbaucheTextBox.Text = Modele1.VisiteurConnecte.dateEmbauche;
 
 
@@ -88,9 +94,10 @@ namespace scrublords
             modifvisiteur.ShowDialog(); 
         }
 
-        private void FInfosVistiteurs_Load(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
-
+            Form listevisiteur = new Flistevisiteur();
+            listevisiteur.Show();
         }
     }
 }

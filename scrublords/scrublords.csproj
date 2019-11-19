@@ -102,6 +102,12 @@
     <Compile Include="FInfosVisiteurs.Designer.cs">
       <DependentUpon>FInfosVisiteurs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Flistevisiteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flistevisiteur.Designer.cs">
+      <DependentUpon>Flistevisiteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fmodifinfossecteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FInfosVisiteurs.resx">
       <DependentUpon>FInfosVisiteurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flistevisiteur.resx">
+      <DependentUpon>Flistevisiteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fmodifinfossecteur.resx">
       <DependentUpon>Fmodifinfossecteur.cs</DependentUpon>

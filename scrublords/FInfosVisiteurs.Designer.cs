@@ -36,10 +36,9 @@
             System.Windows.Forms.Label rueLabel;
             System.Windows.Forms.Label villeLabel;
             System.Windows.Forms.Label idLaboLabel1;
-            System.Windows.Forms.Label montantValideLabel;
             System.Windows.Forms.Label nomLaboLabel;
             System.Windows.Forms.Label idVisiteurLabel1;
-            System.Windows.Forms.Label labelTest;
+            System.Windows.Forms.Label montantValideLabel1;
             this.dateEmbaucheTextBox = new System.Windows.Forms.TextBox();
             this.idVisiteurTextBox = new System.Windows.Forms.TextBox();
             this.nomTextBox = new System.Windows.Forms.TextBox();
@@ -49,11 +48,13 @@
             this.idLaboTextBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.montantValideTextBox = new System.Windows.Forms.TextBox();
             this.nomLaboTextBox = new System.Windows.Forms.TextBox();
             this.idVisiteurTextBox1 = new System.Windows.Forms.TextBox();
-            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
+            this.montantValideTextBox = new System.Windows.Forms.TextBox();
             this.fichefraisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bsvisiteur = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             dateEmbaucheLabel = new System.Windows.Forms.Label();
             idVisiteurLabel = new System.Windows.Forms.Label();
             nomLabel = new System.Windows.Forms.Label();
@@ -61,18 +62,17 @@
             rueLabel = new System.Windows.Forms.Label();
             villeLabel = new System.Windows.Forms.Label();
             idLaboLabel1 = new System.Windows.Forms.Label();
-            montantValideLabel = new System.Windows.Forms.Label();
             nomLaboLabel = new System.Windows.Forms.Label();
             idVisiteurLabel1 = new System.Windows.Forms.Label();
-            labelTest = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
+            montantValideLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fichefraisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).BeginInit();
             this.SuspendLayout();
             // 
             // dateEmbaucheLabel
             // 
             dateEmbaucheLabel.AutoSize = true;
-            dateEmbaucheLabel.Location = new System.Drawing.Point(12, 233);
+            dateEmbaucheLabel.Location = new System.Drawing.Point(12, 240);
             dateEmbaucheLabel.Name = "dateEmbaucheLabel";
             dateEmbaucheLabel.Size = new System.Drawing.Size(85, 13);
             dateEmbaucheLabel.TabIndex = 3;
@@ -132,15 +132,6 @@
             idLaboLabel1.TabIndex = 21;
             idLaboLabel1.Text = "id Labo:";
             // 
-            // montantValideLabel
-            // 
-            montantValideLabel.AutoSize = true;
-            montantValideLabel.Location = new System.Drawing.Point(17, 279);
-            montantValideLabel.Name = "montantValideLabel";
-            montantValideLabel.Size = new System.Drawing.Size(80, 13);
-            montantValideLabel.TabIndex = 31;
-            montantValideLabel.Text = "montant Valide:";
-            // 
             // nomLaboLabel
             // 
             nomLaboLabel.AutoSize = true;
@@ -153,21 +144,20 @@
             // idVisiteurLabel1
             // 
             idVisiteurLabel1.AutoSize = true;
-            idVisiteurLabel1.Location = new System.Drawing.Point(53, 314);
+            idVisiteurLabel1.Location = new System.Drawing.Point(12, 323);
             idVisiteurLabel1.Name = "idVisiteurLabel1";
             idVisiteurLabel1.Size = new System.Drawing.Size(55, 13);
             idVisiteurLabel1.TabIndex = 33;
             idVisiteurLabel1.Text = "id Visiteur:";
             // 
-            // labelTest
+            // montantValideLabel1
             // 
-            labelTest.AutoSize = true;
-            labelTest.Location = new System.Drawing.Point(321, 258);
-            labelTest.Name = "labelTest";
-            labelTest.Size = new System.Drawing.Size(55, 13);
-            labelTest.TabIndex = 35;
-            labelTest.Text = "id Visiteur:";
-            labelTest.Visible = false;
+            montantValideLabel1.AutoSize = true;
+            montantValideLabel1.Location = new System.Drawing.Point(12, 270);
+            montantValideLabel1.Name = "montantValideLabel1";
+            montantValideLabel1.Size = new System.Drawing.Size(80, 13);
+            montantValideLabel1.TabIndex = 35;
+            montantValideLabel1.Text = "montant Valide:";
             // 
             // dateEmbaucheTextBox
             // 
@@ -227,7 +217,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(463, 233);
+            this.button1.Location = new System.Drawing.Point(525, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 23);
             this.button1.TabIndex = 25;
@@ -245,14 +235,6 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Information du visiteur : ";
             // 
-            // montantValideTextBox
-            // 
-            this.montantValideTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fichefraisBindingSource, "montantValide", true));
-            this.montantValideTextBox.Location = new System.Drawing.Point(114, 272);
-            this.montantValideTextBox.Name = "montantValideTextBox";
-            this.montantValideTextBox.Size = new System.Drawing.Size(100, 20);
-            this.montantValideTextBox.TabIndex = 32;
-            // 
             // nomLaboTextBox
             // 
             this.nomLaboTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsvisiteur, "Laboratoire.nomLabo", true));
@@ -263,18 +245,45 @@
             // 
             // idVisiteurTextBox1
             // 
-            this.idVisiteurTextBox1.Location = new System.Drawing.Point(114, 311);
+            this.idVisiteurTextBox1.Location = new System.Drawing.Point(15, 349);
             this.idVisiteurTextBox1.Name = "idVisiteurTextBox1";
             this.idVisiteurTextBox1.Size = new System.Drawing.Size(100, 20);
             this.idVisiteurTextBox1.TabIndex = 34;
+            // 
+            // montantValideTextBox
+            // 
+            this.montantValideTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fichefraisBindingSource, "montantValide", true));
+            this.montantValideTextBox.Location = new System.Drawing.Point(114, 259);
+            this.montantValideTextBox.Name = "montantValideTextBox";
+            this.montantValideTextBox.Size = new System.Drawing.Size(100, 20);
+            this.montantValideTextBox.TabIndex = 36;
+            // 
+            // fichefraisBindingSource
+            // 
+            this.fichefraisBindingSource.DataSource = typeof(scrublords.fichefrais);
             // 
             // bsvisiteur
             // 
             this.bsvisiteur.DataSource = typeof(scrublords.Visiteur);
             // 
-            // fichefraisBindingSource
+            // button2
             // 
-            this.fichefraisBindingSource.DataSource = typeof(scrublords.fichefrais);
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(549, 270);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 44);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Listes visiteurs";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // FInfosVistiteurs
             // 
@@ -283,13 +292,14 @@
             this.BackgroundImage = global::scrublords.Properties.Resources.logo1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(801, 555);
-            this.Controls.Add(labelTest);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(montantValideLabel1);
+            this.Controls.Add(this.montantValideTextBox);
             this.Controls.Add(idVisiteurLabel1);
             this.Controls.Add(this.idVisiteurTextBox1);
             this.Controls.Add(nomLaboLabel);
             this.Controls.Add(this.nomLaboTextBox);
-            this.Controls.Add(montantValideLabel);
-            this.Controls.Add(this.montantValideTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLaboLabel1);
@@ -308,9 +318,8 @@
             this.Controls.Add(this.villeTextBox);
             this.Name = "FInfosVistiteurs";
             this.Text = "FInfosVisiteurs";
-            this.Load += new System.EventHandler(this.FInfosVistiteurs_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fichefraisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsvisiteur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,8 +337,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource fichefraisBindingSource;
-        private System.Windows.Forms.TextBox montantValideTextBox;
         private System.Windows.Forms.TextBox nomLaboTextBox;
         private System.Windows.Forms.TextBox idVisiteurTextBox1;
+        private System.Windows.Forms.TextBox montantValideTextBox;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
