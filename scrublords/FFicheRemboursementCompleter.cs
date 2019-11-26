@@ -13,11 +13,13 @@ namespace scrublords
     public partial class FFicheRemboursementCompleter : Form
     {
         private fichefrais ficheCourante;
+        private List<LigneFraisHorsForfait> lesLignes;
         public FFicheRemboursementCompleter(fichefrais fiche)
         {
             InitializeComponent();
             this.ficheCourante = fiche;
             labMois.Text = fiche.mois;
+            lesLignes = new List<LigneFraisHorsForfait>();
             try
             {
                 int i = 0;
@@ -28,22 +30,27 @@ namespace scrublords
                         case 0: lfhf1.Text = lfhf.libelle;
                             montant1.Value = decimal.Parse(lfhf.montant.ToString());
                             date1.Value = lfhf.date.Value;
+                            lesLignes.Add(lfhf);
                             break;
                         case 1: lfhf2.Text = lfhf.libelle;
                             montant2.Value = decimal.Parse(lfhf.montant.ToString());
                             date2.Value = lfhf.date.Value;
+                            lesLignes.Add(lfhf);
                             break;
                         case 2: lfhf3.Text = lfhf.libelle;
                             montant3.Value = decimal.Parse(lfhf.montant.ToString());
                             date3.Value = lfhf.date.Value;
+                            lesLignes.Add(lfhf);
                             break;
                         case 3: lfhf4.Text = lfhf.libelle;
                             montant4.Value = decimal.Parse(lfhf.montant.ToString());
                             date4.Value = lfhf.date.Value;
+                            lesLignes.Add(lfhf);
                             break;
                         case 4: lfhf5.Text = lfhf.libelle;
                             montant5.Value = decimal.Parse(lfhf.montant.ToString());
                             date5.Value = lfhf.date.Value;
+                            lesLignes.Add(lfhf);
                             break;
                     }
                     i++;    
@@ -107,7 +114,7 @@ namespace scrublords
         private void Fermer_Click(object sender, EventArgs e)
         {
             //enregistrement/modification lignes forfaits
-            decimal total = quaNui.Value * monUniNui.Value + quaRep.Value * monUniRep.Value + quaKil.Value * monUniKil.Value;
+            decimal total = quaNui.Value * monUniNui.Value + quaRep.Value * monUniRep.Value + quaKil.Value * monUniKil.Value + montant1.Value + montant2.Value + montant3.Value + montant4.Value + montant5.Value;
             Modele3.modifFicheFrais(ficheCourante, total);
             try
             {
@@ -134,79 +141,60 @@ namespace scrublords
                 Modele3.insertLigneForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois, "REP", int.Parse(quaRep.Value.ToString()));
             }
             //enregistrement/modification ligne hors forfait
-            int i = 0;
-            foreach (LigneFraisHorsForfait lfhf in Modele3.ligneFraisHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois))
+            if (lfhf1.Text != "" && montant1.Value != 0)
             {
                 try
-                {
-                    Modele3.modifLigneHorsForfait(lfhf, montant1.Value, lfhf1.Text, date1.Value, lfhf.id);
-                    i++;
+                { 
+                    Modele3.modifLigneHorsForfait(lesLignes[0], montant1.Value, lfhf1.Text, date1.Value, lesLignes[0].id);
                 }
-                catch
+                catch (Exception)
                 {
+                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf1.Text, date1.Value, montant1.Value);
                 }
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lfhf, montant2.Value, lfhf2.Text, date2.Value, lfhf.id);
-                    i++;
-                }
-                catch
-                {
-                }
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lfhf, montant5.Value, lfhf5.Text, date3.Value, lfhf.id);
-                    i++;
-                }
-                catch
-                {
-                }
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lfhf, montant3.Value, lfhf3.Text, date3.Value, lfhf.id);
-                    i++;
-                }
-                catch
-                {
-                }
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lfhf, montant4.Value, lfhf4.Text, date4.Value, lfhf.id);
-                    i++;
-                }
-                catch
-                {
-                }
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lfhf, montant5.Value, lfhf5.Text, date5.Value, lfhf.id);
-                    i++;
-                }
-                catch
-                {
-                }
-
             }
-            if (lfhf1.Text != " " && i < 0)
+            if (lfhf2.Text != "" && montant1.Value != 0)
             {
-                Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois, lfhf1.Text, date1.Value, montant1.Value);
-                MessageBox.Show("leviolmdr");
+                try
+                {
+                    Modele3.modifLigneHorsForfait(lesLignes[1], montant2.Value, lfhf2.Text, date2.Value, lesLignes[1].id);
+                }
+                catch (Exception)
+                {
+                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf2.Text, date2.Value, montant2.Value);
+                }
             }
-            if (lfhf2.Text != " " && i < 1)
+            if (lfhf3.Text != "" && montant3.Value != 0)
             {
-                Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois, lfhf2.Text, date2.Value, montant2.Value);
+                try
+                {
+                    Modele3.modifLigneHorsForfait(lesLignes[2], montant3.Value, lfhf3.Text, date3.Value, lesLignes[2].id);
+                }
+                catch (Exception)
+                {
+                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf3.Text, date3.Value, montant3.Value);
+                }
             }
-            if (lfhf3.Text !=" " && i < 2)
+            if (lfhf4.Text != "" && montant4.Value != 0)
             {
-                Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois, lfhf3.Text, date3.Value, montant3.Value);
+                try
+                {
+                    Modele3.modifLigneHorsForfait(lesLignes[3], montant4.Value, lfhf4.Text, date4.Value, lesLignes[3].id);
+                }
+                catch (Exception)
+                {
+                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf4.Text, date4.Value, montant4.Value);
+                }
             }
-            if (lfhf4.Text !=" " && i < 3)
+            if (lfhf5.Text != "" && montant5.Value != 0)
             {
-                Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois, lfhf4.Text, date4.Value, montant4.Value);
-            }
-            if (lfhf5.Text !=" " && i < 4)
-            {
-                Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois, lfhf5.Text, date5.Value, montant5.Value);
+                try
+                {
+                    Modele3.modifLigneHorsForfait(lesLignes[4], montant5.Value, lfhf5.Text, date5.Value, lesLignes[4].id);
+                }
+                catch (Exception)
+                {
+                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf5.Text, date5.Value, montant5.Value);
+                }
             }
         }
     }

@@ -70,6 +70,11 @@
             this.date4 = new System.Windows.Forms.DateTimePicker();
             this.date3 = new System.Windows.Forms.DateTimePicker();
             this.date1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.monUniNui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monUniRep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monUniKil)).BeginInit();
@@ -550,11 +555,81 @@
             this.date1.TabIndex = 50;
             this.date1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button1.Location = new System.Drawing.Point(608, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(16, 19);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button2.Location = new System.Drawing.Point(608, 374);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(16, 19);
+            this.button2.TabIndex = 52;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button3.Location = new System.Drawing.Point(608, 400);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(16, 19);
+            this.button3.TabIndex = 53;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button4.Location = new System.Drawing.Point(608, 426);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(16, 19);
+            this.button4.TabIndex = 54;
+            this.button4.Text = "X";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Red;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button5.Location = new System.Drawing.Point(608, 452);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(16, 19);
+            this.button5.TabIndex = 55;
+            this.button5.Text = "X";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // FFicheRemboursementCompleter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 532);
+            this.ClientSize = new System.Drawing.Size(636, 532);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.date1);
             this.Controls.Add(this.date3);
             this.Controls.Add(this.date4);
@@ -659,5 +734,10 @@
         private System.Windows.Forms.DateTimePicker date4;
         private System.Windows.Forms.DateTimePicker date3;
         private System.Windows.Forms.DateTimePicker date1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

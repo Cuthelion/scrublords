@@ -87,6 +87,12 @@
     <Compile Include="FFicheRemboursementCompleter.Designer.cs">
       <DependentUpon>FFicheRemboursementCompleter.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFicheRembousementConsulter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFicheRembousementConsulter.Designer.cs">
+      <DependentUpon>FFicheRembousementConsulter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FGestionVisiteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FFicheRemboursementCompleter.resx">
       <DependentUpon>FFicheRemboursementCompleter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFicheRembousementConsulter.resx">
+      <DependentUpon>FFicheRembousementConsulter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FGestionVisiteur.resx">
       <DependentUpon>FGestionVisiteur.cs</DependentUpon>
