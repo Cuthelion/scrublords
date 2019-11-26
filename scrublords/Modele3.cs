@@ -203,6 +203,23 @@ namespace scrublords
             }
             return retour;
         }
+        public static bool deleteLigneHorsForfait(int idlf)
+        {
+            bool retour = true;
+            try
+            {
+                var LQuery = maConnexion.LigneFraisHorsForfait.ToList()
+                          .Where(x => x.id == idlf);
+                LigneFraisHorsForfait l = (LigneFraisHorsForfait)LQuery.ToList().First();
+                maConnexion.LigneFraisHorsForfait.Remove(l);
+                maConnexion.SaveChanges();
+            }
+            catch(Exception )
+            {
+                retour = false;
+            }
+            return retour;
+        }
     }
 }
 

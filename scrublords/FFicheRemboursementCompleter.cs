@@ -20,46 +20,17 @@ namespace scrublords
             this.ficheCourante = fiche;
             labMois.Text = fiche.mois;
             lesLignes = new List<LigneFraisHorsForfait>();
-            try
+            bsHorsForfait.DataSource = Modele3.ligneFraisHorsForfait(ficheCourante.idVisiteur, ficheCourante.mois);
+            dataGridView1.DataSource = bsHorsForfait;
+            int i = 0;
+            do
             {
-                int i = 0;
-                foreach(LigneFraisHorsForfait lfhf in Modele3.ligneFraisHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, fiche.mois))
+                if (i < 3 || i > 5)
                 {
-                    switch(i)
-                    {
-                        case 0: lfhf1.Text = lfhf.libelle;
-                            montant1.Value = decimal.Parse(lfhf.montant.ToString());
-                            date1.Value = lfhf.date.Value;
-                            lesLignes.Add(lfhf);
-                            break;
-                        case 1: lfhf2.Text = lfhf.libelle;
-                            montant2.Value = decimal.Parse(lfhf.montant.ToString());
-                            date2.Value = lfhf.date.Value;
-                            lesLignes.Add(lfhf);
-                            break;
-                        case 2: lfhf3.Text = lfhf.libelle;
-                            montant3.Value = decimal.Parse(lfhf.montant.ToString());
-                            date3.Value = lfhf.date.Value;
-                            lesLignes.Add(lfhf);
-                            break;
-                        case 3: lfhf4.Text = lfhf.libelle;
-                            montant4.Value = decimal.Parse(lfhf.montant.ToString());
-                            date4.Value = lfhf.date.Value;
-                            lesLignes.Add(lfhf);
-                            break;
-                        case 4: lfhf5.Text = lfhf.libelle;
-                            montant5.Value = decimal.Parse(lfhf.montant.ToString());
-                            date5.Value = lfhf.date.Value;
-                            lesLignes.Add(lfhf);
-                            break;
-                    }
-                    i++;    
+                    dataGridView1.Columns[i].Visible = false;
                 }
-            }
-            catch(Exception)
-            {
-
-            }
+                i++;
+            } while (i <= 6);
             try
             {
                 quaNui.Value = decimal.Parse(Modele3.ligneFraisForfait("NUI", Modele3.VisiteurConnecte3.idVisiteur, fiche.mois).quantite.ToString());
@@ -113,9 +84,7 @@ namespace scrublords
 
         private void Fermer_Click(object sender, EventArgs e)
         {
-            //enregistrement/modification lignes forfaits
-            decimal total = quaNui.Value * monUniNui.Value + quaRep.Value * monUniRep.Value + quaKil.Value * monUniKil.Value + montant1.Value + montant2.Value + montant3.Value + montant4.Value + montant5.Value;
-            Modele3.modifFicheFrais(ficheCourante, total);
+            //enregistrement/modification lignes forfaits 
             try
             {
                 Modele3.modifLigneForfait(Modele3.ligneFraisForfait("NUI", Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois), int.Parse(quaNui.Value.ToString()));
@@ -140,62 +109,46 @@ namespace scrublords
             {
                 Modele3.insertLigneForfait(Modele3.VisiteurConnecte3.idVisiteur, ficheCourante.mois, "REP", int.Parse(quaRep.Value.ToString()));
             }
-            //enregistrement/modification ligne hors forfait
-            if (lfhf1.Text != "" && montant1.Value != 0)
+            //enregistrement dans la base de donnée
+            decimal totHF = 0;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                try
-                { 
-                    Modele3.modifLigneHorsForfait(lesLignes[0], montant1.Value, lfhf1.Text, date1.Value, lesLignes[0].id);
-                }
-                catch (Exception)
+                foreach (DataGridViewCell cell in row.Cells)
                 {
-                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf1.Text, date1.Value, montant1.Value);
+                    if (cell.ColumnIndex == 5)
+                    {
+                        try
+                        {
+                            totHF += Decimal.Parse(cell.Value.ToString());
+                        }
+                        catch(Exception)
+                        {
+
+                        }
+                    }
                 }
             }
-            if (lfhf2.Text != "" && montant1.Value != 0)
-            {
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lesLignes[1], montant2.Value, lfhf2.Text, date2.Value, lesLignes[1].id);
-                }
-                catch (Exception)
-                {
-                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf2.Text, date2.Value, montant2.Value);
-                }
-            }
-            if (lfhf3.Text != "" && montant3.Value != 0)
-            {
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lesLignes[2], montant3.Value, lfhf3.Text, date3.Value, lesLignes[2].id);
-                }
-                catch (Exception)
-                {
-                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf3.Text, date3.Value, montant3.Value);
-                }
-            }
-            if (lfhf4.Text != "" && montant4.Value != 0)
+            decimal total = quaNui.Value * monUniNui.Value + quaRep.Value * monUniRep.Value + quaKil.Value * monUniKil.Value + totHF;
+            Modele3.modifFicheFrais(ficheCourante, total);
+            foreach(DataGridViewRow d in dataGridView1.Rows)
             {
                 try
                 {
-                    Modele3.modifLigneHorsForfait(lesLignes[3], montant4.Value, lfhf4.Text, date4.Value, lesLignes[3].id);
+                   Modele3.insertLigneHorsForfait(d.Cells[0],ficheCourante.mois,d.Cells[3],)
                 }
-                catch (Exception)
+                catch(Exception)
                 {
-                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf4.Text, date4.Value, montant4.Value);
+
                 }
             }
-            if (lfhf5.Text != "" && montant5.Value != 0)
-            {
-                try
-                {
-                    Modele3.modifLigneHorsForfait(lesLignes[4], montant5.Value, lfhf5.Text, date5.Value, lesLignes[4].id);
-                }
-                catch (Exception)
-                {
-                    Modele3.insertLigneHorsForfait(Modele3.VisiteurConnecte3.idVisiteur, labMois.Text, lfhf5.Text, date5.Value, montant5.Value);
-                }
-            }
+        }
+
+        private void Supprimer_Click(object sender, EventArgs e)
+        {
+           int l = 0;
+           l = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+           Modele3.deleteLigneHorsForfait(l);
+           dataGridView1.Rows.Remove(dataGridView1.CurrentRow);
         }
     }
 }

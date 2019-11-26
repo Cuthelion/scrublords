@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Visiteur = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Matricule = new System.Windows.Forms.Label();
@@ -52,40 +53,17 @@
             this.labTotNui = new System.Windows.Forms.Label();
             this.labTotRep = new System.Windows.Forms.Label();
             this.labTotKil = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lfhf1 = new System.Windows.Forms.TextBox();
-            this.lfhf5 = new System.Windows.Forms.TextBox();
-            this.lfhf4 = new System.Windows.Forms.TextBox();
-            this.lfhf3 = new System.Windows.Forms.TextBox();
-            this.lfhf2 = new System.Windows.Forms.TextBox();
-            this.montant1 = new System.Windows.Forms.NumericUpDown();
-            this.montant4 = new System.Windows.Forms.NumericUpDown();
-            this.montant3 = new System.Windows.Forms.NumericUpDown();
-            this.montant2 = new System.Windows.Forms.NumericUpDown();
-            this.montant5 = new System.Windows.Forms.NumericUpDown();
-            this.date2 = new System.Windows.Forms.DateTimePicker();
-            this.date5 = new System.Windows.Forms.DateTimePicker();
-            this.date4 = new System.Windows.Forms.DateTimePicker();
-            this.date3 = new System.Windows.Forms.DateTimePicker();
-            this.date1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bsHorsForfait = new System.Windows.Forms.BindingSource(this.components);
+            this.supprimer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.monUniNui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monUniRep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monUniKil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaNui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaRep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaKil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsHorsForfait)).BeginInit();
             this.SuspendLayout();
             // 
             // Visiteur
@@ -157,8 +135,9 @@
             // 
             // Fermer
             // 
+            this.Fermer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Fermer.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.Fermer.Location = new System.Drawing.Point(246, 497);
+            this.Fermer.Location = new System.Drawing.Point(225, 497);
             this.Fermer.Name = "Fermer";
             this.Fermer.Size = new System.Drawing.Size(75, 23);
             this.Fermer.TabIndex = 7;
@@ -382,272 +361,41 @@
             this.labTotKil.TabIndex = 26;
             this.labTotKil.Text = "ChangingLabelTotKil";
             // 
-            // label11
+            // dataGridView1
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label11.Location = new System.Drawing.Point(65, 317);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 20);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Date";
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 302);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(506, 189);
+            this.dataGridView1.TabIndex = 27;
             // 
-            // label12
+            // supprimer
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.Control;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label12.Location = new System.Drawing.Point(301, 317);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 20);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Libellé";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.Control;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label13.Location = new System.Drawing.Point(499, 317);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 20);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Montant";
-            // 
-            // lfhf1
-            // 
-            this.lfhf1.Location = new System.Drawing.Point(188, 347);
-            this.lfhf1.Name = "lfhf1";
-            this.lfhf1.Size = new System.Drawing.Size(286, 20);
-            this.lfhf1.TabIndex = 35;
-            // 
-            // lfhf5
-            // 
-            this.lfhf5.Location = new System.Drawing.Point(188, 451);
-            this.lfhf5.Name = "lfhf5";
-            this.lfhf5.Size = new System.Drawing.Size(286, 20);
-            this.lfhf5.TabIndex = 36;
-            // 
-            // lfhf4
-            // 
-            this.lfhf4.Location = new System.Drawing.Point(188, 425);
-            this.lfhf4.Name = "lfhf4";
-            this.lfhf4.Size = new System.Drawing.Size(286, 20);
-            this.lfhf4.TabIndex = 37;
-            // 
-            // lfhf3
-            // 
-            this.lfhf3.Location = new System.Drawing.Point(188, 399);
-            this.lfhf3.Name = "lfhf3";
-            this.lfhf3.Size = new System.Drawing.Size(286, 20);
-            this.lfhf3.TabIndex = 38;
-            // 
-            // lfhf2
-            // 
-            this.lfhf2.Location = new System.Drawing.Point(188, 373);
-            this.lfhf2.Name = "lfhf2";
-            this.lfhf2.Size = new System.Drawing.Size(286, 20);
-            this.lfhf2.TabIndex = 39;
-            // 
-            // montant1
-            // 
-            this.montant1.DecimalPlaces = 2;
-            this.montant1.Location = new System.Drawing.Point(491, 347);
-            this.montant1.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.montant1.Name = "montant1";
-            this.montant1.Size = new System.Drawing.Size(93, 20);
-            this.montant1.TabIndex = 40;
-            // 
-            // montant4
-            // 
-            this.montant4.DecimalPlaces = 2;
-            this.montant4.Location = new System.Drawing.Point(491, 425);
-            this.montant4.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.montant4.Name = "montant4";
-            this.montant4.Size = new System.Drawing.Size(93, 20);
-            this.montant4.TabIndex = 42;
-            // 
-            // montant3
-            // 
-            this.montant3.DecimalPlaces = 2;
-            this.montant3.Location = new System.Drawing.Point(491, 399);
-            this.montant3.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.montant3.Name = "montant3";
-            this.montant3.Size = new System.Drawing.Size(93, 20);
-            this.montant3.TabIndex = 43;
-            // 
-            // montant2
-            // 
-            this.montant2.DecimalPlaces = 2;
-            this.montant2.Location = new System.Drawing.Point(491, 373);
-            this.montant2.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.montant2.Name = "montant2";
-            this.montant2.Size = new System.Drawing.Size(93, 20);
-            this.montant2.TabIndex = 44;
-            // 
-            // montant5
-            // 
-            this.montant5.DecimalPlaces = 2;
-            this.montant5.Location = new System.Drawing.Point(491, 451);
-            this.montant5.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.montant5.Name = "montant5";
-            this.montant5.Size = new System.Drawing.Size(93, 20);
-            this.montant5.TabIndex = 45;
-            // 
-            // date2
-            // 
-            this.date2.Location = new System.Drawing.Point(3, 373);
-            this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(177, 20);
-            this.date2.TabIndex = 46;
-            this.date2.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            // 
-            // date5
-            // 
-            this.date5.Location = new System.Drawing.Point(3, 451);
-            this.date5.Name = "date5";
-            this.date5.Size = new System.Drawing.Size(177, 20);
-            this.date5.TabIndex = 47;
-            this.date5.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            // 
-            // date4
-            // 
-            this.date4.Location = new System.Drawing.Point(3, 425);
-            this.date4.Name = "date4";
-            this.date4.Size = new System.Drawing.Size(177, 20);
-            this.date4.TabIndex = 48;
-            this.date4.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            // 
-            // date3
-            // 
-            this.date3.Location = new System.Drawing.Point(3, 399);
-            this.date3.Name = "date3";
-            this.date3.Size = new System.Drawing.Size(177, 20);
-            this.date3.TabIndex = 49;
-            this.date3.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            // 
-            // date1
-            // 
-            this.date1.Location = new System.Drawing.Point(3, 347);
-            this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(177, 20);
-            this.date1.TabIndex = 50;
-            this.date1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.button1.Location = new System.Drawing.Point(608, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(16, 19);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.button2.Location = new System.Drawing.Point(608, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(16, 19);
-            this.button2.TabIndex = 52;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.button3.Location = new System.Drawing.Point(608, 400);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(16, 19);
-            this.button3.TabIndex = 53;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.button4.Location = new System.Drawing.Point(608, 426);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(16, 19);
-            this.button4.TabIndex = 54;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.button5.Location = new System.Drawing.Point(608, 452);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(16, 19);
-            this.button5.TabIndex = 55;
-            this.button5.Text = "X";
-            this.button5.UseVisualStyleBackColor = false;
+            this.supprimer.BackColor = System.Drawing.Color.Red;
+            this.supprimer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.supprimer.Location = new System.Drawing.Point(530, 302);
+            this.supprimer.Name = "supprimer";
+            this.supprimer.Size = new System.Drawing.Size(94, 189);
+            this.supprimer.TabIndex = 28;
+            this.supprimer.Text = "Supprimer";
+            this.supprimer.UseVisualStyleBackColor = false;
+            this.supprimer.Click += new System.EventHandler(this.Supprimer_Click);
             // 
             // FFicheRemboursementCompleter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 532);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.date1);
-            this.Controls.Add(this.date3);
-            this.Controls.Add(this.date4);
-            this.Controls.Add(this.date5);
-            this.Controls.Add(this.date2);
-            this.Controls.Add(this.montant5);
-            this.Controls.Add(this.montant2);
-            this.Controls.Add(this.montant3);
-            this.Controls.Add(this.montant4);
-            this.Controls.Add(this.montant1);
-            this.Controls.Add(this.lfhf2);
-            this.Controls.Add(this.lfhf3);
-            this.Controls.Add(this.lfhf4);
-            this.Controls.Add(this.lfhf5);
-            this.Controls.Add(this.lfhf1);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.supprimer);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labTotKil);
             this.Controls.Add(this.labTotRep);
             this.Controls.Add(this.labTotNui);
@@ -680,11 +428,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.quaNui)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaRep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quaKil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.montant5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsHorsForfait)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -716,28 +461,8 @@
         private System.Windows.Forms.Label labTotNui;
         private System.Windows.Forms.Label labTotRep;
         private System.Windows.Forms.Label labTotKil;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox lfhf1;
-        private System.Windows.Forms.TextBox lfhf5;
-        private System.Windows.Forms.TextBox lfhf4;
-        private System.Windows.Forms.TextBox lfhf3;
-        private System.Windows.Forms.TextBox lfhf2;
-        private System.Windows.Forms.NumericUpDown montant1;
-        private System.Windows.Forms.NumericUpDown montant4;
-        private System.Windows.Forms.NumericUpDown montant3;
-        private System.Windows.Forms.NumericUpDown montant2;
-        private System.Windows.Forms.NumericUpDown montant5;
-        private System.Windows.Forms.DateTimePicker date2;
-        private System.Windows.Forms.DateTimePicker date5;
-        private System.Windows.Forms.DateTimePicker date4;
-        private System.Windows.Forms.DateTimePicker date3;
-        private System.Windows.Forms.DateTimePicker date1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource bsHorsForfait;
+        private System.Windows.Forms.Button supprimer;
     }
 }
